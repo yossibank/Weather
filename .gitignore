@@ -58,7 +58,9 @@ Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 *.xcworkspace
-
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
