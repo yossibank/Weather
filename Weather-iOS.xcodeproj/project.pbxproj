@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3A51F8690AE3295118B22693 /* Pods_Weather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51BA60637869EF9FF4607E2 /* Pods_Weather_iOS.framework */; };
+		780E714C25C6BBDD002EE6CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 780E714B25C6BBDD002EE6CB /* Localizable.strings */; };
+		780E715025C6BC0B002EE6CB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E714F25C6BC0B002EE6CB /* Strings.swift */; };
+		780E715425C6BC12002EE6CB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E715325C6BC12002EE6CB /* Images.swift */; };
+		780E715825C6BC21002EE6CB /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E715725C6BC21002EE6CB /* Resources.swift */; };
 		7819EF8025C6931A00F66453 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819EF7F25C6931A00F66453 /* R.generated.swift */; };
 		7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCAD25C687F0007E3CEB /* AppDelegate.swift */; };
 		7820DCB225C687F0007E3CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCB125C687F0007E3CEB /* ViewController.swift */; };
@@ -31,6 +35,10 @@
 /* Begin PBXFileReference section */
 		0103AABDF9137C4B5D4F14E6 /* Pods_Weather_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3628EEA63C5DDB44FE9089AB /* Pods-Weather-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Weather-iOSTests/Pods-Weather-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		780E714B25C6BBDD002EE6CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		780E714F25C6BC0B002EE6CB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		780E715325C6BC12002EE6CB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		780E715725C6BC21002EE6CB /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		7819EF7F25C6931A00F66453 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = "Weather-iOS/AppResources/R/R.generated.swift"; sourceTree = SOURCE_ROOT; };
 		7820DCAA25C687F0007E3CEB /* Weather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7820DCAD25C687F0007E3CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +163,9 @@
 		780E714125C6BA2C002EE6CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				780E715725C6BC21002EE6CB /* Resources.swift */,
+				780E714F25C6BC0B002EE6CB /* Strings.swift */,
+				780E715325C6BC12002EE6CB /* Images.swift */,
 				780E714425C6BA52002EE6CB /* ResourcesSupport */,
 			);
 			path = Resources;
@@ -163,6 +174,7 @@
 		780E714225C6BA37002EE6CB /* LocalizedStrings */ = {
 			isa = PBXGroup;
 			children = (
+				780E714B25C6BBDD002EE6CB /* Localizable.strings */,
 			);
 			path = LocalizedStrings;
 			sourceTree = "<group>";
@@ -361,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */,
+				780E714C25C6BBDD002EE6CB /* Localizable.strings in Resources */,
 				7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */,
 				7820DCB525C687F0007E3CEB /* Main.storyboard in Resources */,
 			);
@@ -485,6 +498,9 @@
 			files = (
 				7820DCB225C687F0007E3CEB /* ViewController.swift in Sources */,
 				7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */,
+				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
+				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
+				780E715025C6BC0B002EE6CB /* Strings.swift in Sources */,
 				7819EF8025C6931A00F66453 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
