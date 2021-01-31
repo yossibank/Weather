@@ -14,7 +14,6 @@
 		7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB625C687F2007E3CEB /* Assets.xcassets */; };
 		7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB825C687F2007E3CEB /* LaunchScreen.storyboard */; };
 		7820DCC525C687F2007E3CEB /* Weather_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */; };
-		7820DCD025C687F2007E3CEB /* Weather_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCCF25C687F2007E3CEB /* Weather_iOSUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +46,6 @@
 		7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSTests.swift; sourceTree = "<group>"; };
 		7820DCC625C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7820DCCB25C687F2007E3CEB /* Weather-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7820DCCF25C687F2007E3CEB /* Weather_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSUITests.swift; sourceTree = "<group>"; };
-		7820DCD125C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +78,6 @@
 			children = (
 				7820DCAC25C687F0007E3CEB /* Weather-iOS */,
 				7820DCC325C687F2007E3CEB /* Weather-iOSTests */,
-				7820DCCE25C687F2007E3CEB /* Weather-iOSUITests */,
 				7820DCAB25C687F0007E3CEB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,15 +113,6 @@
 				7820DCC625C687F2007E3CEB /* Info.plist */,
 			);
 			path = "Weather-iOSTests";
-			sourceTree = "<group>";
-		};
-		7820DCCE25C687F2007E3CEB /* Weather-iOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7820DCCF25C687F2007E3CEB /* Weather_iOSUITests.swift */,
-				7820DCD125C687F2007E3CEB /* Info.plist */,
-			);
-			path = "Weather-iOSUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7820DCD025C687F2007E3CEB /* Weather_iOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
