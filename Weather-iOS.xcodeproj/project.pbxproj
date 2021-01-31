@@ -10,7 +10,6 @@
 		3A51F8690AE3295118B22693 /* Pods_Weather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51BA60637869EF9FF4607E2 /* Pods_Weather_iOS.framework */; };
 		7819EF8025C6931A00F66453 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819EF7F25C6931A00F66453 /* R.generated.swift */; };
 		7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCAD25C687F0007E3CEB /* AppDelegate.swift */; };
-		7820DCB025C687F0007E3CEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCAF25C687F0007E3CEB /* SceneDelegate.swift */; };
 		7820DCB225C687F0007E3CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCB125C687F0007E3CEB /* ViewController.swift */; };
 		7820DCB525C687F0007E3CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB325C687F0007E3CEB /* Main.storyboard */; };
 		7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB625C687F2007E3CEB /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 		7819EF7F25C6931A00F66453 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		7820DCAA25C687F0007E3CEB /* Weather-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7820DCAD25C687F0007E3CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7820DCAF25C687F0007E3CEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7820DCB125C687F0007E3CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7820DCB425C687F0007E3CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7820DCB625C687F2007E3CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			children = (
 				7819EF7F25C6931A00F66453 /* R.generated.swift */,
 				7820DCAD25C687F0007E3CEB /* AppDelegate.swift */,
-				7820DCAF25C687F0007E3CEB /* SceneDelegate.swift */,
 				7820DCB125C687F0007E3CEB /* ViewController.swift */,
 				7820DCB325C687F0007E3CEB /* Main.storyboard */,
 				7820DCB625C687F2007E3CEB /* Assets.xcassets */,
@@ -344,7 +341,6 @@
 			files = (
 				7820DCB225C687F0007E3CEB /* ViewController.swift in Sources */,
 				7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */,
-				7820DCB025C687F0007E3CEB /* SceneDelegate.swift in Sources */,
 				7819EF8025C6931A00F66453 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
