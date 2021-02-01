@@ -18,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5e4-du-1Ke" customClass="IBDesignableView" customModule="Weather_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="45"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="x4O-Sc-dSP">
-                                        <rect key="frame" x="23" y="8" width="368" height="34"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="x4O-Sc-dSP">
+                                        <rect key="frame" x="23" y="4.5" width="368" height="36"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vie-oj-07J">
-                                                <rect key="frame" x="0.0" y="0.0" width="188" height="34"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vie-oj-07J">
+                                                <rect key="frame" x="0.0" y="0.0" width="188" height="36"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQx-j7-OMK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="36"/>
                                                         <state key="normal" image="check_off"/>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お気に入りのみ表示する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-yn-z66">
-                                                        <rect key="frame" x="34" y="0.0" width="154" height="34"/>
+                                                        <rect key="frame" x="34" y="0.0" width="154" height="36"/>
                                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -39,9 +39,9 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMl-aT-hXs" customClass="IBDesignableButton" customModule="Weather_iOS" customModuleProvider="target">
-                                                <rect key="frame" x="268" y="0.0" width="100" height="34"/>
+                                                <rect key="frame" x="260" y="0.0" width="108" height="36"/>
                                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
-                                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="2" maxX="10" maxY="2"/>
                                                 <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="絞り込み" image="map">
                                                     <color key="titleColor" systemColor="labelColor"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ed0-an-fu5"/>
+                                    <constraint firstAttribute="height" constant="45" id="Ed0-an-fu5"/>
                                     <constraint firstItem="x4O-Sc-dSP" firstAttribute="centerX" secondItem="5e4-du-1Ke" secondAttribute="centerX" id="GIo-Og-gpx"/>
                                     <constraint firstItem="x4O-Sc-dSP" firstAttribute="centerY" secondItem="5e4-du-1Ke" secondAttribute="centerY" id="kmJ-8d-f35"/>
                                 </constraints>
@@ -77,7 +77,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mut-ab-hHd">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -104,12 +104,12 @@
     </scenes>
     <designables>
         <designable name="JMl-aT-hXs">
-            <size key="intrinsicContentSize" width="100" height="34"/>
+            <size key="intrinsicContentSize" width="108" height="36"/>
         </designable>
     </designables>
     <resources>
-        <image name="check_off" width="24" height="24"/>
-        <image name="map" width="24" height="24"/>
+        <image name="check_off" width="32" height="32"/>
+        <image name="map" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
