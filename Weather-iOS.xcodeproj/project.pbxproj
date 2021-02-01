@@ -18,6 +18,9 @@
 		7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB625C687F2007E3CEB /* Assets.xcassets */; };
 		7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB825C687F2007E3CEB /* LaunchScreen.storyboard */; };
 		7820DCC525C687F2007E3CEB /* Weather_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */; };
+		7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */; };
+		782669A225C83A4100871A6C /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782669A125C83A4100871A6C /* IBDesignableView.swift */; };
+		782669A625C83BB100871A6C /* IBDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782669A525C83BB100871A6C /* IBDesignableButton.swift */; };
 		784550B625C6DCD400F73A07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784550B525C6DCD400F73A07 /* R.generated.swift */; };
 		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
 		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
@@ -53,6 +56,9 @@
 		7820DCC025C687F2007E3CEB /* Weather-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSTests.swift; sourceTree = "<group>"; };
 		7820DCC625C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-IBInspectable-Extension.swift"; sourceTree = "<group>"; };
+		782669A125C83A4100871A6C /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
+		782669A525C83BB100871A6C /* IBDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableButton.swift; sourceTree = "<group>"; };
 		784550B525C6DCD400F73A07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 		780E713B25C6B9EE002EE6CB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				7826699925C8188400871A6C /* IBdesignable */,
+				7826699A25C818B700871A6C /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -273,6 +281,23 @@
 				7820DCC625C687F2007E3CEB /* Info.plist */,
 			);
 			path = "Weather-iOSTests";
+			sourceTree = "<group>";
+		};
+		7826699925C8188400871A6C /* IBdesignable */ = {
+			isa = PBXGroup;
+			children = (
+				782669A125C83A4100871A6C /* IBDesignableView.swift */,
+				782669A525C83BB100871A6C /* IBDesignableButton.swift */,
+			);
+			path = IBdesignable;
+			sourceTree = "<group>";
+		};
+		7826699A25C818B700871A6C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		784550B925C6DD8E00F73A07 /* Home */ = {
@@ -533,12 +558,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782669A625C83BB100871A6C /* IBDesignableButton.swift in Sources */,
 				7820DCB225C687F0007E3CEB /* HomeViewController.swift in Sources */,
 				7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */,
 				78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */,
+				782669A225C83A4100871A6C /* IBDesignableView.swift in Sources */,
 				7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */,
 				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
+				7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */,
 				78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */,
 				780E715025C6BC0B002EE6CB /* Strings.swift in Sources */,
 				784550B625C6DCD400F73A07 /* R.generated.swift in Sources */,
