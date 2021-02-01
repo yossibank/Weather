@@ -19,6 +19,7 @@
 		7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB825C687F2007E3CEB /* LaunchScreen.storyboard */; };
 		7820DCC525C687F2007E3CEB /* Weather_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */; };
 		784550B625C6DCD400F73A07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784550B525C6DCD400F73A07 /* R.generated.swift */; };
+		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
 		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
 		78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */; };
 		78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336D325C6E4F4009A213C /* PrefectureViewData.swift */; };
@@ -53,6 +54,7 @@
 		7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSTests.swift; sourceTree = "<group>"; };
 		7820DCC625C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		784550B525C6DCD400F73A07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		78F336D325C6E4F4009A213C /* PrefectureViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewData.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		780E714425C6BA52002EE6CB /* ResourcesSupport */ = {
 			isa = PBXGroup;
 			children = (
+				7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */,
 			);
 			path = ResourcesSupport;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				7820DCB225C687F0007E3CEB /* HomeViewController.swift in Sources */,
 				7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */,
 				78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */,
+				7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */,
 				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
 				78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */,
