@@ -17,8 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5e4-du-1Ke">
+                                <rect key="frame" x="0.0" y="54" width="414" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="x4O-Sc-dSP">
+                                        <rect key="frame" x="29" y="10" width="356" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vie-oj-07J">
+                                                <rect key="frame" x="0.0" y="0.0" width="210" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQx-j7-OMK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お気に入りのみ表示する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbZ-yn-z66">
+                                                        <rect key="frame" x="56" y="0.0" width="154" height="30"/>
+                                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMl-aT-hXs">
+                                                <rect key="frame" x="310" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ed0-an-fu5"/>
+                                    <constraint firstItem="x4O-Sc-dSP" firstAttribute="centerX" secondItem="5e4-du-1Ke" secondAttribute="centerX" id="GIo-Og-gpx"/>
+                                    <constraint firstItem="x4O-Sc-dSP" firstAttribute="centerY" secondItem="5e4-du-1Ke" secondAttribute="centerY" id="kmJ-8d-f35"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mut-ab-hHd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -26,7 +61,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mut-ab-hHd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J5Z-78-OXT"/>
-                            <constraint firstItem="Mut-ab-hHd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gfE-Sw-4JE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5e4-du-1Ke" secondAttribute="trailing" id="Ru9-TA-J7g"/>
+                            <constraint firstItem="5e4-du-1Ke" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WmB-bY-UPE"/>
+                            <constraint firstItem="Mut-ab-hHd" firstAttribute="top" secondItem="5e4-du-1Ke" secondAttribute="bottom" id="jff-fG-16a"/>
+                            <constraint firstItem="5e4-du-1Ke" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kAi-fS-dzn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mut-ab-hHd" secondAttribute="bottom" id="qaJ-eM-pJM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mut-ab-hHd" secondAttribute="trailing" id="zcC-Ut-Iv6"/>
                         </constraints>
@@ -37,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="115"/>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
         </scene>
     </scenes>
     <resources>
