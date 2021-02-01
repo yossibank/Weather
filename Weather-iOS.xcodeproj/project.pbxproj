@@ -19,6 +19,9 @@
 		7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB825C687F2007E3CEB /* LaunchScreen.storyboard */; };
 		7820DCC525C687F2007E3CEB /* Weather_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */; };
 		784550B625C6DCD400F73A07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784550B525C6DCD400F73A07 /* R.generated.swift */; };
+		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
+		78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */; };
+		78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336D325C6E4F4009A213C /* PrefectureViewData.swift */; };
 		E227819D33D8D8A5C9E36F7A /* Pods_Weather_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0103AABDF9137C4B5D4F14E6 /* Pods_Weather_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,9 @@
 		7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSTests.swift; sourceTree = "<group>"; };
 		7820DCC625C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		784550B525C6DCD400F73A07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		78F336D325C6E4F4009A213C /* PrefectureViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewData.swift; sourceTree = "<group>"; };
 		8869B46752C361E3B37E13B5 /* Pods-Weather-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-iOS.release.xcconfig"; path = "Target Support Files/Pods-Weather-iOS/Pods-Weather-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9A032FC5D155A8AB3C84B9A5 /* Pods-Weather-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Weather-iOSTests/Pods-Weather-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FA132DD2B8C96EEE3E92ED /* Pods-Weather-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Weather-iOS/Pods-Weather-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -269,10 +275,29 @@
 		784550B925C6DD8E00F73A07 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				78F336D025C6E146009A213C /* ViewData */,
+				78F336C725C6DE7D009A213C /* View */,
 				7820DCB125C687F0007E3CEB /* HomeViewController.swift */,
 				7820DCB325C687F0007E3CEB /* HomeViewController.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		78F336C725C6DE7D009A213C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */,
+				78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78F336D025C6E146009A213C /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				78F336D325C6E4F4009A213C /* PrefectureViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 		7AFC36F227C9D9BF580F4E90 /* Pods */ = {
@@ -383,6 +408,7 @@
 				7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */,
 				780E714C25C6BBDD002EE6CB /* Localizable.strings in Resources */,
 				7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */,
+				78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */,
 				7820DCB525C687F0007E3CEB /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,8 +532,10 @@
 			files = (
 				7820DCB225C687F0007E3CEB /* HomeViewController.swift in Sources */,
 				7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */,
+				78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */,
 				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
+				78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */,
 				780E715025C6BC0B002EE6CB /* Strings.swift in Sources */,
 				784550B625C6DCD400F73A07 /* R.generated.swift in Sources */,
 			);
