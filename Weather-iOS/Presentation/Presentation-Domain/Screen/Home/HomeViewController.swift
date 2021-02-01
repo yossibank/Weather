@@ -12,7 +12,7 @@ final class HomeViewController: UIViewController {
     }
 
     private func setupTableView() {
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.register(HomeTableViewCell.xib(), forCellReuseIdentifier: HomeTableViewCell.resourceName)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 50
@@ -39,7 +39,10 @@ extension HomeViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? HomeTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: HomeTableViewCell.resourceName,
+                for: indexPath) as? HomeTableViewCell
+        else {
             return UITableViewCell()
         }
 
