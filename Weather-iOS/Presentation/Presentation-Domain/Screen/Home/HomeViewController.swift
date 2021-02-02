@@ -22,7 +22,7 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(viewData[indexPath.row].id)
+        print(viewData[indexPath.row].apiName)
     }
 }
 
