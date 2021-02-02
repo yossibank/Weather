@@ -22,6 +22,8 @@
 		782669A225C83A4100871A6C /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782669A125C83A4100871A6C /* IBDesignableView.swift */; };
 		782669A625C83BB100871A6C /* IBDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782669A525C83BB100871A6C /* IBDesignableButton.swift */; };
 		784550B625C6DCD400F73A07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784550B525C6DCD400F73A07 /* R.generated.swift */; };
+		7850F93D25C9645700849266 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F93C25C9645700849266 /* DetailViewController.swift */; };
+		7850F94325C9646100849266 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7850F94225C9646100849266 /* DetailViewController.storyboard */; };
 		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
 		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
 		78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */; };
@@ -60,6 +62,8 @@
 		782669A125C83A4100871A6C /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
 		782669A525C83BB100871A6C /* IBDesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableButton.swift; sourceTree = "<group>"; };
 		784550B525C6DCD400F73A07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		7850F93C25C9645700849266 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7850F94225C9646100849266 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 			children = (
 				780E714825C6BAF7002EE6CB /* Launch */,
 				784550B925C6DD8E00F73A07 /* Home */,
+				7850F93B25C9643A00849266 /* Detail */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -309,6 +314,15 @@
 				7820DCB325C687F0007E3CEB /* HomeViewController.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		7850F93B25C9643A00849266 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				7850F93C25C9645700849266 /* DetailViewController.swift */,
+				7850F94225C9646100849266 /* DetailViewController.storyboard */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		78F336C725C6DE7D009A213C /* View */ = {
@@ -437,6 +451,7 @@
 				780E714C25C6BBDD002EE6CB /* Localizable.strings in Resources */,
 				7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */,
 				78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */,
+				7850F94325C9646100849266 /* DetailViewController.storyboard in Resources */,
 				7820DCB525C687F0007E3CEB /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +573,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7850F93D25C9645700849266 /* DetailViewController.swift in Sources */,
 				782669A625C83BB100871A6C /* IBDesignableButton.swift in Sources */,
 				7820DCB225C687F0007E3CEB /* HomeViewController.swift in Sources */,
 				7820DCAE25C687F0007E3CEB /* AppDelegate.swift in Sources */,
