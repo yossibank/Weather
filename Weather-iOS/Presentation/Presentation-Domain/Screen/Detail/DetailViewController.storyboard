@@ -17,24 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="XGC-4D-b9j">
-                                <rect key="frame" x="82" y="94" width="250" height="526"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="XGC-4D-b9j">
+                                <rect key="frame" x="107" y="94" width="200" height="436"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtC-uL-Hug">
-                                        <rect key="frame" x="105" y="0.0" width="40" height="20"/>
+                                        <rect key="frame" x="80" y="0.0" width="40" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QNy-SE-yar">
-                                        <rect key="frame" x="0.0" y="100" width="250" height="250"/>
+                                        <rect key="frame" x="0.0" y="80" width="200" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="ALQ-AC-yjs"/>
-                                            <constraint firstAttribute="height" constant="250" id="vWL-yQ-8R0"/>
+                                            <constraint firstAttribute="width" constant="200" id="ALQ-AC-yjs"/>
+                                            <constraint firstAttribute="height" constant="200" id="vWL-yQ-8R0"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-Ud-pFO">
-                                        <rect key="frame" x="89" y="430" width="72" height="96"/>
+                                        <rect key="frame" x="64" y="340" width="72" height="96"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天気" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WR2-9v-192">
                                                 <rect key="frame" x="16" y="0.0" width="40" height="20"/>
