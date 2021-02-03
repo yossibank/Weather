@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A51F8690AE3295118B22693 /* Pods_Weather_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51BA60637869EF9FF4607E2 /* Pods_Weather_iOS.framework */; };
+		78098D8425CADD06006D62FF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78098D8325CADD06006D62FF /* Router.swift */; };
+		78098D8825CADD87006D62FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78098D8725CADD87006D62FF /* ViewController.swift */; };
 		780E714C25C6BBDD002EE6CB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 780E714B25C6BBDD002EE6CB /* Localizable.strings */; };
 		780E715025C6BC0B002EE6CB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E714F25C6BC0B002EE6CB /* Strings.swift */; };
 		780E715425C6BC12002EE6CB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780E715325C6BC12002EE6CB /* Images.swift */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		0103AABDF9137C4B5D4F14E6 /* Pods_Weather_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3628EEA63C5DDB44FE9089AB /* Pods-Weather-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-Weather-iOSTests/Pods-Weather-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		78098D8325CADD06006D62FF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		78098D8725CADD87006D62FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		780E714B25C6BBDD002EE6CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		780E714F25C6BC0B002EE6CB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		780E715325C6BC12002EE6CB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		780E713D25C6B9FB002EE6CB /* Convenience */ = {
 			isa = PBXGroup;
 			children = (
+				78098D8725CADD87006D62FF /* ViewController.swift */,
 			);
 			path = Convenience;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 		780E714625C6BAE6002EE6CB /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				78098D8325CADD06006D62FF /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -573,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78098D8825CADD87006D62FF /* ViewController.swift in Sources */,
 				7850F93D25C9645700849266 /* DetailViewController.swift in Sources */,
 				782669A625C83BB100871A6C /* IBDesignableButton.swift in Sources */,
 				7820DCB225C687F0007E3CEB /* HomeViewController.swift in Sources */,
@@ -583,6 +590,7 @@
 				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
 				7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */,
+				78098D8425CADD06006D62FF /* Router.swift in Sources */,
 				78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */,
 				780E715025C6BC0B002EE6CB /* Strings.swift in Sources */,
 				784550B625C6DCD400F73A07 /* R.generated.swift in Sources */,
