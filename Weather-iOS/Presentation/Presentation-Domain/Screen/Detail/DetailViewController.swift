@@ -8,6 +8,11 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var highestTemperatureLabel: UILabel!
     @IBOutlet weak var lowestTemperatureLabel: UILabel!
 
+    static func createInstance() -> DetailViewController {
+        let instance = DetailViewController.instantiateInitialViewController()
+        return instance
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

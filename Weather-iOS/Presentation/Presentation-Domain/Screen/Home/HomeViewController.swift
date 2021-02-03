@@ -6,6 +6,11 @@ final class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    static func createInstance() -> HomeViewController {
+        let instance = HomeViewController.instantiateInitialViewController()
+        return instance
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
