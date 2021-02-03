@@ -3,6 +3,7 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     private let viewData = Prefecture.allCases.map { $0 }
+    private let router: RouterProtocol = Router()
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -27,7 +28,10 @@ final class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
         print(viewData[indexPath.row].apiName)
+        router.push(.detail, from: self)
     }
 }
 
