@@ -5,18 +5,28 @@ final class DetailViewModel {
     init(cityName: String) {
         self.cityName = cityName
     }
-    
-    func fetchWeatherData() {
+
+    func fetchWeatherData(completion: @escaping (Result<DetailViewData, APIError>) -> Void) {
         WeatherDetailRequest().request(parameter: .init(q: cityName)) { result in
 
             switch result {
 
             case .success(let response):
-                dump(response)
+                completion(.success(self.map(data: response)))
 
             case .failure(let error):
-                dump(error.description())
+                completion(.failure(error))
             }
         }
+    }
+
+    func map(data: WeatherDetailRequest.Response) -> DetailViewData {
+        DetailViewData(
+            date: data.dt,
+            weatherImageUrlString: data.weather[0].icon,
+            weatherName: data.weather[0].main,
+            highestTemperature: data.main.tempMax,
+            lowestTemperature: data.main.tempMin
+        )
     }
 }

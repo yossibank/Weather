@@ -102,7 +102,9 @@ extension BaseRequest {
 
                 do {
                     let entity = try self.decoder.decode(Response.self, from: data)
-                    completionHandler?(.success(entity))
+                    DispatchQueue.main.async {
+                        completionHandler?(.success(entity))
+                    }
                 } catch {
                     completionHandler?(.failure(.decode(error: error)))
                 }
