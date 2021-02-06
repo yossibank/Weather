@@ -20,8 +20,9 @@ extension Resources {
             return vc
         }
 
-        func detail() -> DetailViewController {
-            let vc = DetailViewController.createInstance()
+        func detail(cityName: String) -> DetailViewController {
+            let viewModel = DetailViewModel(cityName: cityName)
+            let vc = DetailViewController.createInstance(viewModel: viewModel)
             return vc
         }
     }

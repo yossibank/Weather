@@ -8,8 +8,11 @@ final class DetailViewController: UIViewController {
     @IBOutlet weak var highestTemperatureLabel: UILabel!
     @IBOutlet weak var lowestTemperatureLabel: UILabel!
 
-    static func createInstance() -> DetailViewController {
+    private var viewModel: DetailViewModel!
+
+    static func createInstance(viewModel: DetailViewModel) -> DetailViewController {
         let instance = DetailViewController.instantiateInitialViewController()
+        instance.viewModel = viewModel
         return instance
     }
 

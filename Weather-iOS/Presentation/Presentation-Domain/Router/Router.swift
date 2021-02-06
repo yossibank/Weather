@@ -116,7 +116,7 @@ extension RouterProtocol {
 enum Route {
 
     case home
-    case detail
+    case detail(cityName: String)
 
     fileprivate func viewController() -> UIViewController {
 
@@ -127,8 +127,8 @@ enum Route {
         case .home:
             viewController = Resources.ViewControllers.App.home()
 
-        case .detail:
-            viewController = Resources.ViewControllers.App.detail()
+        case .detail(let cityName):
+            viewController = Resources.ViewControllers.App.detail(cityName: cityName)
         }
 
         return viewController

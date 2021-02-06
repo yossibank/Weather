@@ -30,8 +30,7 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        print(viewData[indexPath.row].apiName)
-        router.push(.detail, from: self)
+        router.push(.detail(cityName: viewData[indexPath.row].apiName), from: self)
     }
 }
 
