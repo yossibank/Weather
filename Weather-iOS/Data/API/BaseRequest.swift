@@ -21,7 +21,7 @@ protocol BaseRequest {
     var decoder: JSONDecoder { get }
 
     func request(
-        _ parameter: Request?,
+        parameter: Request?,
         completionHandler: ((Result<Response, APIError>) -> Void)?
     )
 }
