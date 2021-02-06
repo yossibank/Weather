@@ -26,10 +26,12 @@
 		784550B625C6DCD400F73A07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784550B525C6DCD400F73A07 /* R.generated.swift */; };
 		7850F93D25C9645700849266 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F93C25C9645700849266 /* DetailViewController.swift */; };
 		7850F94325C9646100849266 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7850F94225C9646100849266 /* DetailViewController.storyboard */; };
+		785F769225CE75FA00251416 /* String+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F769125CE75FA00251416 /* String+Util.swift */; };
 		786A847725CC118600198689 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847625CC118600198689 /* HttpMethod.swift */; };
 		786A847B25CC156E00198689 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847A25CC156E00198689 /* APIError.swift */; };
-		786A848025CC1C1F00198689 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847F25CC1C1F00198689 /* APIClient.swift */; };
+		786A848025CC1C1F00198689 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847F25CC1C1F00198689 /* BaseRequest.swift */; };
 		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
+		78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D052B825CE7295003121FC /* AppConfigurator.swift */; };
 		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
 		78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */; };
 		78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336D325C6E4F4009A213C /* PrefectureViewData.swift */; };
@@ -71,10 +73,12 @@
 		784550B525C6DCD400F73A07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7850F93C25C9645700849266 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7850F94225C9646100849266 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		785F769125CE75FA00251416 /* String+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Util.swift"; sourceTree = "<group>"; };
 		786A847625CC118600198689 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		786A847A25CC156E00198689 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		786A847F25CC1C1F00198689 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		786A847F25CC1C1F00198689 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
+		78D052B825CE7295003121FC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		78F336D325C6E4F4009A213C /* PrefectureViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewData.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		780E713A25C6B9E2002EE6CB /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
+				78D052B825CE7295003121FC /* AppConfigurator.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 		780E713B25C6B9EE002EE6CB /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				785F769025CE75DC00251416 /* AppUtil */,
 				7826699925C8188400871A6C /* IBdesignable */,
 				7826699A25C818B700871A6C /* Extension */,
 			);
@@ -179,7 +185,7 @@
 			children = (
 				786A847E25CC1C0900198689 /* Request */,
 				786A848625CC1C3C00198689 /* Response */,
-				786A847F25CC1C1F00198689 /* APIClient.swift */,
+				786A847F25CC1C1F00198689 /* BaseRequest.swift */,
 				786A847625CC118600198689 /* HttpMethod.swift */,
 				786A847A25CC156E00198689 /* APIError.swift */,
 			);
@@ -340,6 +346,14 @@
 				7850F94225C9646100849266 /* DetailViewController.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		785F769025CE75DC00251416 /* AppUtil */ = {
+			isa = PBXGroup;
+			children = (
+				785F769125CE75FA00251416 /* String+Util.swift */,
+			);
+			path = AppUtil;
 			sourceTree = "<group>";
 		};
 		786A847E25CC1C0900198689 /* Request */ = {
@@ -616,12 +630,14 @@
 				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
 				7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */,
+				785F769225CE75FA00251416 /* String+Util.swift in Sources */,
+				78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */,
 				78098D8425CADD06006D62FF /* Router.swift in Sources */,
 				786A847725CC118600198689 /* HttpMethod.swift in Sources */,
 				78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */,
 				780E715025C6BC0B002EE6CB /* Strings.swift in Sources */,
 				784550B625C6DCD400F73A07 /* R.generated.swift in Sources */,
-				786A848025CC1C1F00198689 /* APIClient.swift in Sources */,
+				786A848025CC1C1F00198689 /* BaseRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,7 +29,7 @@ protocol BaseRequest {
 extension BaseRequest {
 
     var baseUrl: String {
-        "api.openweathermap.org/data/2.5/weather"
+        AppConfigurator.currentApiUrl.description
     }
 
     var url: URL? {
