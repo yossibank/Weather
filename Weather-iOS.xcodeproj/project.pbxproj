@@ -36,6 +36,7 @@
 		786A848025CC1C1F00198689 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847F25CC1C1F00198689 /* BaseRequest.swift */; };
 		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
 		78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D052B825CE7295003121FC /* AppConfigurator.swift */; };
+		78E7B45525CEBA5B009AFCF7 /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */; };
 		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
 		78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */; };
 		78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336D325C6E4F4009A213C /* PrefectureViewData.swift */; };
@@ -87,6 +88,7 @@
 		786A847F25CC1C1F00198689 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78D052B825CE7295003121FC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		78F336D325C6E4F4009A213C /* PrefectureViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewData.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				785F769125CE75FA00251416 /* String+Util.swift */,
+				78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */,
 			);
 			path = AppUtil;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E7B45525CEBA5B009AFCF7 /* Array+Util.swift in Sources */,
 				78098D8825CADD87006D62FF /* ViewController.swift in Sources */,
 				7850F93D25C9645700849266 /* DetailViewController.swift in Sources */,
 				785F769E25CE783C00251416 /* WeatherDetailResponse.swift in Sources */,
