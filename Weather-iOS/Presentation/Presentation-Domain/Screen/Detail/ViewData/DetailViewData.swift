@@ -7,29 +7,42 @@ struct DetailViewData {
 }
 
 enum WeatherDescription: String {
-    case clearKey
-    case fewClouds
-    case scatteredCoulds
-    case brokenClouds
-    case showerRain
-    case rain
-    case thunderstorm
-    case snow
-    case mist
-    
-    var description: String? {
+    case thunderstorm = "thunderstorm"
+    case drizzle      = "Drizzle"
+    case rain         = "Rain"
+    case snow         = "Snow"
+    case mist         = "Mist"
+    case smoke        = "Smoke"
+    case haze         = "Haze"
+    case fog          = "Fog"
+    case sand         = "Sand"
+    case dust         = "Dust"
+    case ash          = "Ash"
+    case squall       = "Squall"
+    case tornado      = "Tronado"
+    case clear        = "Clear"
+    case clouds       = "Clouds"
+
+    var description: String {
 
         switch self {
 
-        case .clearKey:        return "晴れ"
-        case .fewClouds:       return "わずかに曇り"
-        case .scatteredCoulds: return "曇り"
-        case .brokenClouds:    return "割れ雲"
-        case .showerRain:      return "にわか雨"
-        case .rain:            return "雨"
-        case .thunderstorm:    return "雷"
-        case .snow:            return "雪"
-        case .mist:            return "霧"
+        case .thunderstorm: return "雷雨"
+        case .drizzle:      return "霧雨"
+        case .rain:         return "雨"
+        case .snow:         return "雪"
+        case .mist:         return "霧"
+        case .smoke:        return "煙霧"
+        case .haze:         return "霧"
+        case .fog:          return "霧"
+        case .sand:         return "黄砂"
+        case .dust:         return "ダスト"
+        case .ash:          return "火山灰"
+        case .squall:       return "スコール"
+        case .tornado:      return "竜巻"
+        case .clear:        return "晴れ"
+        case .clouds:       return "曇り"
+
         }
     }
 }

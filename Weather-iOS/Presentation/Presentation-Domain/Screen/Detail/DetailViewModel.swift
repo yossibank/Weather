@@ -6,7 +6,9 @@ final class DetailViewModel {
         self.cityName = cityName
     }
 
-    func fetchWeatherData(completion: @escaping (Result<DetailViewData, APIError>) -> Void) {
+    func fetchWeatherData(
+        completion: @escaping (Result<DetailViewData, APIError>) -> Void
+    ) {
         WeatherDetailRequest().request(parameter: .init(q: cityName)) { result in
 
             switch result {
@@ -21,10 +23,20 @@ final class DetailViewModel {
     }
 
     func map(data: WeatherDetailRequest.Response) -> DetailViewData {
-        DetailViewData(
+        guard let weatherName = WeatherDescription(rawValue: data.weather[0].main) else {
+            return DetailViewData(
+                date: data.dt,
+                weatherImageUrlString: data.weather[0].icon,
+                weatherName: Resources.Strings.Weather.unknown,
+                highestTemperature: data.main.tempMax,
+                lowestTemperature: data.main.tempMin
+            )
+        }
+
+        return DetailViewData(
             date: data.dt,
             weatherImageUrlString: data.weather[0].icon,
-            weatherName: data.weather[0].main,
+            weatherName: weatherName.description,
             highestTemperature: data.main.tempMax,
             lowestTemperature: data.main.tempMin
         )

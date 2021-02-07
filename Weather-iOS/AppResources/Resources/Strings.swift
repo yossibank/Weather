@@ -1,6 +1,10 @@
 struct StringResources {
 
-//    private typealias Internal = R.string
+    private typealias Internal = R.string
+
+    struct Weather {
+        static var unknown: String { Internal.localizable.unknown() }
+    }
 
     struct API {
         static let apiBaseUrl = "https://api.openweathermap.org/data/2.5/weather"
