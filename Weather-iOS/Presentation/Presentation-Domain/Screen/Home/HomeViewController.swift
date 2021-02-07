@@ -27,7 +27,10 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if let cityName = viewData.any(at: indexPath.row)?.apiName {
@@ -49,17 +52,17 @@ extension HomeViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
+        let cell = tableView.dequeueReusableCell(
                 withIdentifier: HomeTableViewCell.resourceName,
-                for: indexPath) as? HomeTableViewCell
-        else {
-            return UITableViewCell()
-        }
+                for: indexPath
+        )
 
-        cell.accessoryType = .disclosureIndicator
+        if let cell = cell as? HomeTableViewCell {
+            cell.accessoryType = .disclosureIndicator
 
-        if let item = viewData.any(at: indexPath.row) {
-            cell.setup(item: item)
+            if let item = viewData.any(at: indexPath.row) {
+                cell.setup(item: item)
+            }
         }
 
         return cell

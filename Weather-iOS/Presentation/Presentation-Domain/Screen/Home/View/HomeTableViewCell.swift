@@ -3,7 +3,7 @@ import UIKit
 final class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var favoriteButton: UIButton!
-    @IBOutlet weak var prefectureName: UILabel!
+    @IBOutlet weak var prefectureNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -14,6 +14,6 @@ final class HomeTableViewCell: UITableViewCell {
     }
 
     func setup(item: Prefecture) {
-        prefectureName.text = item.name
+        prefectureNameLabel.text = item.name
     }
 }
