@@ -18,12 +18,22 @@ final class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setWeatherData()
+    }
+    
+    private func setWeatherData() {
         viewModel.fetchWeatherData { result in
 
             switch result {
 
             case .success(let weatherData):
                 self.weatherLabel.text = weatherData.weatherName
+                
+                ImageLoader.shared.loadImage(
+                    with: .string(urlSring: "https://openweathermap.org/img/w/\(weatherData.weatherImageUrlString).png")
+                ) { image, _ in
+                    self.weatherImageView.image = image
+                }
 
                 self.highestTemperatureLabel.text = Resources.Strings.Weather.highestTemperature
                     + Double.convertCelsiusToString(weatherData.highestTemperature)
