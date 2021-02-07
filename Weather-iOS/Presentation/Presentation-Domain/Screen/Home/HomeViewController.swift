@@ -6,6 +6,7 @@ final class HomeViewController: UIViewController {
     private let router: RouterProtocol = Router()
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var areaFilterButton: UIButton!
 
     static func createInstance() -> HomeViewController {
         let instance = HomeViewController.instantiateInitialViewController()
@@ -14,7 +15,16 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButton()
         setupTableView()
+    }
+
+    private func setupButton() {
+        areaFilterButton.addTarget(
+            self,
+            action: #selector(areaFilterButtonTapped(_:)),
+            for: .touchUpInside
+        )
     }
 
     private func setupTableView() {
@@ -22,6 +32,31 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 50
+    }
+}
+
+extension HomeViewController {
+
+    @objc private func areaFilterButtonTapped(_ button: UIButton) {
+        let viewController = AreaFilterViewController.instantiateInitialViewController()
+
+        showPopover(
+            viewController: viewController,
+            sourceView: button,
+            viewSize: viewController.viewSize,
+            direction: .up,
+            delegate: self
+        )
+    }
+}
+
+extension HomeViewController: UIPopoverPresentationControllerDelegate {
+
+    func adaptivePresentationStyle(
+        for controller: UIPresentationController,
+        traitCollection: UITraitCollection
+    ) -> UIModalPresentationStyle {
+        .none
     }
 }
 

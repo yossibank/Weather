@@ -103,7 +103,7 @@ final class ImageLoader {
             self.tasks[url] = [completion]
         }
 
-        URLSession.shared.retryDataTask(request: request) { [weak self] data, response, error in
+        URLSession.shared.retryDataTask(request: request) { [weak self] data, _, error in
             guard let self = self else { return }
 
             if let error = error {

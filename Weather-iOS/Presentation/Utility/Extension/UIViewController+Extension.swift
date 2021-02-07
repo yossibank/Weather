@@ -2,7 +2,7 @@ import UIKit
 
 extension UIViewController {
 
-    func showPopOver(
+    func showPopover(
         viewController: UIViewController,
         sourceView:     UIView,
         viewSize:       CGSize,

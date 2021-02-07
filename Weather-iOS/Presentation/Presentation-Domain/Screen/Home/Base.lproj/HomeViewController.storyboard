@@ -86,6 +86,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="areaFilterButton" destination="JMl-aT-hXs" id="aTg-Yb-AVh"/>
                         <outlet property="tableView" destination="Mut-ab-hHd" id="4Ev-HM-468"/>
                     </connections>
                 </viewController>
