@@ -1,9 +1,26 @@
 import UIKit
 
+protocol AreaFilterCellDelegate: AnyObject {
+    func didSelectCheckButton(at index: Int)
+}
+
 class AreaFilterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var checkButton: UIButton!
-    @IBOutlet weak var regionNameLabel: UILabel!
+    @IBOutlet weak var checkButton: UIButton! {
+        didSet {
+            checkButton.addTarget(
+                self,
+                action: #selector(checkButtonTapped(_:)),
+                for: .touchUpInside
+            )
+
+            checkButton.isSelected = true
+        }
+    }
+
+    @IBOutlet weak var areaNameLabel: UILabel!
+
+    weak var delegate: AreaFilterCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -14,6 +31,17 @@ class AreaFilterTableViewCell: UITableViewCell {
     }
 
     func setup(item: Area) {
-        regionNameLabel.text = item.name
+        areaNameLabel.text = item.name
+
+        let image = checkButton.isSelected ?
+            Resources.Images.General.checkIn :
+            Resources.Images.General.checkOff
+
+        checkButton.setImage(image, for: .normal)
+    }
+
+    @objc private func checkButtonTapped(_ sender: UIButton) {
+        checkButton.isSelected = !checkButton.isSelected
+        delegate?.didSelectCheckButton(at: sender.tag)
     }
 }

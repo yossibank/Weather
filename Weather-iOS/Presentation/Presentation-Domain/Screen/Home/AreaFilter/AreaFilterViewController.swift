@@ -2,11 +2,19 @@ import UIKit
 
 final class AreaFilterViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
     let viewSize = CGSize(width: 160, height: 44 * 8)
 
     private let viewData = Area.allCases.map { $0 }
 
-    @IBOutlet weak var tableView: UITableView!
+    private var viewModel: AreaFilterViewModel!
+
+    static func createInstance(viewModel: AreaFilterViewModel) -> AreaFilterViewController {
+        let instance = AreaFilterViewController.instantiateInitialViewController()
+        instance.viewModel = viewModel
+        return instance
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +36,8 @@ extension AreaFilterViewController: UITableViewDelegate {
         didSelectRowAt indexPath: IndexPath
     ) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        viewModel.updateAreaIds(areaId: indexPath.row)
     }
 }
 
@@ -52,10 +62,22 @@ extension AreaFilterViewController: UITableViewDataSource {
         if let cell = cell as? AreaFilterTableViewCell {
 
             if let item = viewData.any(at: indexPath.row) {
+                cell.delegate = self
+                cell.checkButton.tag = indexPath.row
                 cell.setup(item: item)
             }
         }
 
         return cell
+    }
+}
+
+extension AreaFilterViewController: AreaFilterCellDelegate {
+
+    func didSelectCheckButton(at index: Int) {
+        tableView.reloadRows(
+            at: [IndexPath(row: index, section: 0)],
+            with: .fade
+        )
     }
 }

@@ -38,7 +38,7 @@ final class HomeViewController: UIViewController {
 extension HomeViewController {
 
     @objc private func areaFilterButtonTapped(_ button: UIButton) {
-        let viewController = AreaFilterViewController.instantiateInitialViewController()
+        let viewController = AreaFilterViewController.createInstance(viewModel: AreaFilterViewModel())
 
         showPopover(
             viewController: viewController,
