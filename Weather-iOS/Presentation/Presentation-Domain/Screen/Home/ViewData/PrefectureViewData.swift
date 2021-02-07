@@ -120,3 +120,30 @@ enum Prefecture: String, CaseIterable {
         }
     }
 }
+
+enum Region: String, CaseIterable {
+    case hokkaido
+    case tohoku
+    case kanto
+    case chubu
+    case kansai
+    case chugoku
+    case shikoku
+    case kyusyu
+    
+    var name: String {
+        
+        switch self {
+        
+        case .hokkaido: return "北海道地方"
+        case .tohoku:   return "東北地方"
+        case .kanto:    return "関東地方"
+        case .chubu:    return "中部地方"
+        case .kansai:   return "関西地方"
+        case .chugoku:  return "中国地方"
+        case .shikoku:  return "四国地方"
+        case .kyusyu:   return "九州地方"
+
+        }
+    }
+}

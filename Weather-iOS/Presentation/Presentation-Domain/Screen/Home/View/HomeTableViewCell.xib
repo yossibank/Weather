@@ -38,7 +38,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="favoriteButton" destination="B8i-ZN-z3s" id="fA1-Uo-Cmb"/>
-                <outlet property="prefectureName" destination="2gL-5E-eDw" id="pRW-a6-aYA"/>
+                <outlet property="prefectureNameLabel" destination="2gL-5E-eDw" id="RPM-au-SNF"/>
             </connections>
             <point key="canvasLocation" x="250.00000000000003" y="126.22767857142857"/>
         </tableViewCell>

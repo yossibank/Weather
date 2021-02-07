@@ -6,6 +6,7 @@ final class HomeViewController: UIViewController {
     private let router: RouterProtocol = Router()
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var areaFilterButton: UIButton!
 
     static func createInstance() -> HomeViewController {
         let instance = HomeViewController.instantiateInitialViewController()
@@ -14,7 +15,16 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButton()
         setupTableView()
+    }
+
+    private func setupButton() {
+        areaFilterButton.addTarget(
+            self,
+            action: #selector(areaFilterButtonTapped(_:)),
+            for: .touchUpInside
+        )
     }
 
     private func setupTableView() {
@@ -25,9 +35,37 @@ final class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController {
+
+    @objc private func areaFilterButtonTapped(_ button: UIButton) {
+        let viewController = AreaFilterViewController.instantiateInitialViewController()
+
+        showPopover(
+            viewController: viewController,
+            sourceView: button,
+            viewSize: viewController.viewSize,
+            direction: .up,
+            delegate: self
+        )
+    }
+}
+
+extension HomeViewController: UIPopoverPresentationControllerDelegate {
+
+    func adaptivePresentationStyle(
+        for controller: UIPresentationController,
+        traitCollection: UITraitCollection
+    ) -> UIModalPresentationStyle {
+        .none
+    }
+}
+
 extension HomeViewController: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if let cityName = viewData.any(at: indexPath.row)?.apiName {
@@ -49,17 +87,17 @@ extension HomeViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
+        let cell = tableView.dequeueReusableCell(
                 withIdentifier: HomeTableViewCell.resourceName,
-                for: indexPath) as? HomeTableViewCell
-        else {
-            return UITableViewCell()
-        }
+                for: indexPath
+        )
 
-        cell.accessoryType = .disclosureIndicator
+        if let cell = cell as? HomeTableViewCell {
+            cell.accessoryType = .disclosureIndicator
 
-        if let item = viewData.any(at: indexPath.row) {
-            cell.setup(item: item)
+            if let item = viewData.any(at: indexPath.row) {
+                cell.setup(item: item)
+            }
         }
 
         return cell
