@@ -30,8 +30,9 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        print(viewData[indexPath.row].apiName)
-        router.push(.detail, from: self)
+        if let cityName = viewData.any(at: indexPath.row)?.apiName {
+            router.push(.detail(cityName: cityName), from: self)
+        }
     }
 }
 
@@ -56,7 +57,10 @@ extension HomeViewController: UITableViewDataSource {
         }
 
         cell.accessoryType = .disclosureIndicator
-        cell.setup(item: viewData[indexPath.row])
+
+        if let item = viewData.any(at: indexPath.row) {
+            cell.setup(item: item)
+        }
 
         return cell
     }

@@ -1,4 +1,5 @@
 enum Prefecture: String, CaseIterable {
+    /* 北海道地方 */
     case hokkaido
     /* 東北地方 */
     case aomori
@@ -105,8 +106,8 @@ enum Prefecture: String, CaseIterable {
         case .miyazaki : return "宮崎県"
         case .kagoshima: return "鹿児島県"
         case .okinawa  : return "沖縄県"
-        }
 
+        }
     }
 
     var apiName: String {
@@ -115,7 +116,7 @@ enum Prefecture: String, CaseIterable {
 
         default:
             return rawValue.prefix(1).uppercased() + rawValue.dropFirst()
-        }
 
+        }
     }
 }

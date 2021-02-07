@@ -21,7 +21,7 @@ protocol BaseRequest {
     var decoder: JSONDecoder { get }
 
     func request(
-        _ parameter: Request?,
+        parameter: Request?,
         completionHandler: ((Result<Response, APIError>) -> Void)?
     )
 }
@@ -29,7 +29,7 @@ protocol BaseRequest {
 extension BaseRequest {
 
     var baseUrl: String {
-        "api.openweathermap.org/data/2.5/weather"
+        AppConfigurator.currentApiUrl.description
     }
 
     var url: URL? {
@@ -102,7 +102,9 @@ extension BaseRequest {
 
                 do {
                     let entity = try self.decoder.decode(Response.self, from: data)
-                    completionHandler?(.success(entity))
+                    DispatchQueue.main.async {
+                        completionHandler?(.success(entity))
+                    }
                 } catch {
                     completionHandler?(.failure(.decode(error: error)))
                 }

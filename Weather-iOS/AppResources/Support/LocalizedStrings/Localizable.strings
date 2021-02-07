@@ -1,7 +1,4 @@
-/* 
-  Localizable.strings
-  Weather-iOS
-
-  Created by KAMIYAMA YOSHIHITO on 2021/01/31.
-  
-*/
+"unknown" = "不明";
+"degree" = "度";
+"highestTemperature" = "最高気温: ";
+"lowestTemperature" = "最低気温: ";
