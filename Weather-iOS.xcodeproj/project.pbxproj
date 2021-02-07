@@ -40,6 +40,7 @@
 		786A847B25CC156E00198689 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847A25CC156E00198689 /* APIError.swift */; };
 		786A848025CC1C1F00198689 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847F25CC1C1F00198689 /* BaseRequest.swift */; };
 		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
+		78A4EB9C25CFBB6100AF0E2D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */; };
 		78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D052B825CE7295003121FC /* AppConfigurator.swift */; };
 		78E7B45525CEBA5B009AFCF7 /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */; };
 		78F336CA25C6DE8C009A213C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */; };
@@ -97,6 +98,7 @@
 		786A847A25CC156E00198689 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		786A847F25CC1C1F00198689 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
+		78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		78D052B825CE7295003121FC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */,
+				78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 				782E1FF725CF909600657A36 /* ImageLoader.swift in Sources */,
 				780E715425C6BC12002EE6CB /* Images.swift in Sources */,
 				785F76A225CE866900251416 /* DetailViewModel.swift in Sources */,
+				78A4EB9C25CFBB6100AF0E2D /* UIViewController+Extension.swift in Sources */,
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
 				785F769A25CE782000251416 /* WeatherDetailRequest.swift in Sources */,
 				7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */,
