@@ -4,7 +4,7 @@ final class AreaFilterViewController: UIViewController {
 
     let viewSize = CGSize(width: 160, height: 44 * 8)
 
-    private let viewData = Region.allCases.map { $0 }
+    private let viewData = Area.allCases.map { $0 }
 
     @IBOutlet weak var tableView: UITableView!
 

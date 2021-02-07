@@ -13,7 +13,7 @@ class AreaFilterTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func setup(item: Region) {
+    func setup(item: Area) {
         regionNameLabel.text = item.name
     }
 }
