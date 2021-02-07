@@ -19,17 +19,24 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchWeatherData { result in
+
             switch result {
-            
+
             case .success(let weatherData):
+                self.weatherLabel.text = weatherData.weatherName
+
+                self.highestTemperatureLabel.text = Resources.Strings.Weather.highestTemperature
+                    + Double.convertCelsiusToString(weatherData.highestTemperature)
+                    + Resources.Strings.Weather.degree
+
+                self.lowestTemperatureLabel.text = Resources.Strings.Weather.lowestTemperature
+                    + Double.convertCelsiusToString(weatherData.lowestTemperature)
+                    + Resources.Strings.Weather.degree
+
                 self.dateLabel.text = Date
                     .fromConvertToDate(time: weatherData.date)
                     .toConvertString(with: .yearToDayOfWeekJapanase)
 
-                self.weatherLabel.text = weatherData.weatherName
-                self.highestTemperatureLabel.text = String(weatherData.highestTemperature - 273.15)
-                self.lowestTemperatureLabel.text = String(weatherData.lowestTemperature - 273.15)
-                
             case .failure(let error):
                 dump(error.description())
             }

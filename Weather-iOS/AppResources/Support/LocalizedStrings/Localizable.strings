@@ -1,1 +1,4 @@
 "unknown" = "不明";
+"degree" = "度";
+"highestTemperature" = "最高気温: ";
+"lowestTemperature" = "最低気温: ";
