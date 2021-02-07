@@ -26,6 +26,8 @@
 		782E1FEC25CF777F00657A36 /* Date+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E1FEB25CF777F00657A36 /* Date+Util.swift */; };
 		782E1FF025CF7FFA00657A36 /* Double+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E1FEF25CF7FFA00657A36 /* Double+Util.swift */; };
 		782E1FF725CF909600657A36 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E1FF625CF909600657A36 /* ImageLoader.swift */; };
+		782E202525CFB61000657A36 /* AreaFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E202425CFB61000657A36 /* AreaFilterViewController.swift */; };
+		782E202B25CFB62000657A36 /* AreaFilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782E202A25CFB62000657A36 /* AreaFilterViewController.storyboard */; };
 		784550B625C6DCD400F73A07 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784550B525C6DCD400F73A07 /* R.generated.swift */; };
 		7850F93D25C9645700849266 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7850F93C25C9645700849266 /* DetailViewController.swift */; };
 		7850F94325C9646100849266 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7850F94225C9646100849266 /* DetailViewController.storyboard */; };
@@ -81,6 +83,8 @@
 		782E1FEB25CF777F00657A36 /* Date+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Util.swift"; sourceTree = "<group>"; };
 		782E1FEF25CF7FFA00657A36 /* Double+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Util.swift"; sourceTree = "<group>"; };
 		782E1FF625CF909600657A36 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		782E202425CFB61000657A36 /* AreaFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFilterViewController.swift; sourceTree = "<group>"; };
+		782E202A25CFB62000657A36 /* AreaFilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaFilterViewController.storyboard; sourceTree = "<group>"; };
 		784550B525C6DCD400F73A07 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7850F93C25C9645700849266 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7850F94225C9646100849266 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
@@ -352,6 +356,15 @@
 			path = ImageLoader;
 			sourceTree = "<group>";
 		};
+		782E202325CFB5E700657A36 /* AreaFilter */ = {
+			isa = PBXGroup;
+			children = (
+				782E202425CFB61000657A36 /* AreaFilterViewController.swift */,
+				782E202A25CFB62000657A36 /* AreaFilterViewController.storyboard */,
+			);
+			path = AreaFilter;
+			sourceTree = "<group>";
+		};
 		784550B925C6DD8E00F73A07 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +372,7 @@
 				78F336C725C6DE7D009A213C /* View */,
 				7820DCB125C687F0007E3CEB /* HomeViewController.swift */,
 				7820DCB325C687F0007E3CEB /* HomeViewController.storyboard */,
+				782E202325CFB5E700657A36 /* AreaFilter */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -534,6 +548,7 @@
 			files = (
 				7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */,
 				780E714C25C6BBDD002EE6CB /* Localizable.strings in Resources */,
+				782E202B25CFB62000657A36 /* AreaFilterViewController.storyboard in Resources */,
 				7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */,
 				78F336CB25C6DE8C009A213C /* HomeTableViewCell.xib in Resources */,
 				7850F94325C9646100849266 /* DetailViewController.storyboard in Resources */,
@@ -658,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782E202525CFB61000657A36 /* AreaFilterViewController.swift in Sources */,
 				78E7B45525CEBA5B009AFCF7 /* Array+Util.swift in Sources */,
 				78098D8825CADD87006D62FF /* ViewController.swift in Sources */,
 				7850F93D25C9645700849266 /* DetailViewController.swift in Sources */,
