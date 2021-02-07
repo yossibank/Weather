@@ -22,11 +22,10 @@ final class DetailViewController: UIViewController {
             switch result {
             
             case .success(let weatherData):
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy/MM/dd/HH"
-                dateFormatter.timeZone = NSTimeZone(name: "GMT") as TimeZone?
-                let date = Date(timeIntervalSince1970: weatherData.date)
-                self.dateLabel.text = String(dateFormatter.string(from: date))
+                self.dateLabel.text = Date
+                    .fromConvertToDate(time: weatherData.date)
+                    .toConvertString(with: .yearToDayOfWeekJapanase)
+
                 self.weatherLabel.text = weatherData.weatherName
                 self.highestTemperatureLabel.text = String(weatherData.highestTemperature - 273.15)
                 self.lowestTemperatureLabel.text = String(weatherData.lowestTemperature - 273.15)
