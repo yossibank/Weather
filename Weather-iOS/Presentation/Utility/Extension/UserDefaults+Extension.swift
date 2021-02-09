@@ -21,11 +21,6 @@ extension UserDefaults {
         }
     }
 
-    static func removeAreaId(areaId: Int) {
-        let newValue = areaIds.filter { $0 != areaId }
-        areaIds = newValue
-    }
-
     static func removeObject(key: Keys) {
         userDefaults.removeObject(forKey: accessKey(key))
     }

@@ -38,6 +38,16 @@ extension AreaFilterViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
 
         viewModel.updateAreaIds(areaId: indexPath.row)
+
+        let cell = tableView.cellForRow(at: indexPath)
+        if let areaFilterCell = cell as? AreaFilterTableViewCell {
+            let image = UserDefaults.areaIds.contains(indexPath.row) ?
+                Resources.Images.General.checkIn :
+                Resources.Images.General.checkOff
+
+            areaFilterCell.checkButton.setImage(image, for: .normal)
+            areaFilterCell.checkButton.isSelected = !areaFilterCell.checkButton.isSelected
+        }
     }
 }
 
@@ -59,10 +69,14 @@ extension AreaFilterViewController: UITableViewDataSource {
             for: indexPath
         )
 
-        if let cell = cell as? AreaFilterTableViewCell {
-
+        if let areaFilterCell = cell as? AreaFilterTableViewCell {
             if let item = viewData.any(at: indexPath.row) {
-                cell.setup(item: item)
+                let image = UserDefaults.areaIds.contains(indexPath.row) ?
+                    Resources.Images.General.checkIn :
+                    Resources.Images.General.checkOff
+
+                areaFilterCell.checkButton.setImage(image, for: .normal)
+                areaFilterCell.setup(item: item)
             }
         }
 

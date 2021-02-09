@@ -15,11 +15,5 @@ final class AreaFilterTableViewCell: UITableViewCell {
 
     func setup(item: Area) {
         areaNameLabel.text = item.name
-
-        let image = checkButton.isSelected ?
-            Resources.Images.General.checkIn :
-            Resources.Images.General.checkOff
-
-        checkButton.setImage(image, for: .normal)
     }
 }
