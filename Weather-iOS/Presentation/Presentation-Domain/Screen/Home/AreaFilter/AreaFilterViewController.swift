@@ -62,22 +62,10 @@ extension AreaFilterViewController: UITableViewDataSource {
         if let cell = cell as? AreaFilterTableViewCell {
 
             if let item = viewData.any(at: indexPath.row) {
-                cell.delegate = self
-                cell.checkButton.tag = indexPath.row
                 cell.setup(item: item)
             }
         }
 
         return cell
-    }
-}
-
-extension AreaFilterViewController: AreaFilterCellDelegate {
-
-    func didSelectCheckButton(at index: Int) {
-        tableView.reloadRows(
-            at: [IndexPath(row: index, section: 0)],
-            with: .fade
-        )
     }
 }
