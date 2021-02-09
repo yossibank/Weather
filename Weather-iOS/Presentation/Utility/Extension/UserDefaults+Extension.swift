@@ -3,7 +3,7 @@ import Foundation
 extension UserDefaults {
 
     enum Keys: String, CaseIterable {
-        case areaId
+        case areaIds
     }
 
     static func accessKey(_ key: Keys) -> String {
@@ -12,12 +12,21 @@ extension UserDefaults {
 
     static private let userDefaults = UserDefaults.standard
 
-    static var areaId: [Int]? {
+    static var areaIds: [Int] {
         get {
-            return userDefaults.array(forKey: accessKey(.areaId)) as? [Int]
+            return userDefaults.array(forKey: accessKey(.areaIds)) as? [Int] ?? []
         }
         set {
-            userDefaults.set(newValue, forKey: accessKey(.areaId))
+            userDefaults.set(newValue, forKey: accessKey(.areaIds))
         }
+    }
+
+    static func removeAreaId(areaId: Int) {
+        let newValue = areaIds.filter { $0 != areaId }
+        areaIds = newValue
+    }
+
+    static func removeObject(key: Keys) {
+        userDefaults.removeObject(forKey: accessKey(key))
     }
 }
