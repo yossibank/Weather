@@ -39,6 +39,7 @@
 		786A847725CC118600198689 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847625CC118600198689 /* HttpMethod.swift */; };
 		786A847B25CC156E00198689 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847A25CC156E00198689 /* APIError.swift */; };
 		786A848025CC1C1F00198689 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A847F25CC1C1F00198689 /* BaseRequest.swift */; };
+		787D52C125D2AB86001D01E3 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D52C025D2AB86001D01E3 /* UserDefaults+Extension.swift */; };
 		7886766325C7FCBC00CB9C47 /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */; };
 		78A4EB9C25CFBB6100AF0E2D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */; };
 		78A4EBA225CFC2FB00AF0E2D /* AreaFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4EBA025CFC2FB00AF0E2D /* AreaFilterTableViewCell.swift */; };
@@ -100,6 +101,7 @@
 		786A847625CC118600198689 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		786A847A25CC156E00198689 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		786A847F25CC1C1F00198689 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		787D52C025D2AB86001D01E3 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		7886766225C7FCBC00CB9C47 /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		78A4EBA025CFC2FB00AF0E2D /* AreaFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			children = (
 				7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */,
 				78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */,
+				787D52C025D2AB86001D01E3 /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */,
 				785F769225CE75FA00251416 /* String+Util.swift in Sources */,
 				78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */,
+				787D52C125D2AB86001D01E3 /* UserDefaults+Extension.swift in Sources */,
 				78098D8425CADD06006D62FF /* Router.swift in Sources */,
 				786A847725CC118600198689 /* HttpMethod.swift in Sources */,
 				78F336D425C6E4F4009A213C /* PrefectureViewData.swift in Sources */,
