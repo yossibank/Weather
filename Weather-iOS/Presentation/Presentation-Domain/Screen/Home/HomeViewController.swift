@@ -2,8 +2,13 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    private let viewData = Prefecture.allCases.map { $0 }
     private let router: RouterProtocol = Router()
+
+    private var viewData = Prefecture.allCases.map { $0 } {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var areaFilterButton: UIButton!
@@ -38,12 +43,13 @@ final class HomeViewController: UIViewController {
 extension HomeViewController {
 
     @objc private func areaFilterButtonTapped(_ button: UIButton) {
-        let viewController = AreaFilterViewController.createInstance(viewModel: AreaFilterViewModel())
+        let areaFilterVC = AreaFilterViewController.createInstance(viewModel: AreaFilterViewModel())
+        areaFilterVC.delegate = self
 
         showPopover(
-            viewController: viewController,
+            viewController: areaFilterVC,
             sourceView: button,
-            viewSize: viewController.viewSize,
+            viewSize: areaFilterVC.viewSize,
             direction: .up,
             delegate: self
         )
@@ -101,5 +107,12 @@ extension HomeViewController: UITableViewDataSource {
         }
 
         return cell
+    }
+}
+
+extension HomeViewController: AreaFilterTappedDelegate {
+
+    func didSelectAreaFilter(areaIds: [Int]) {
+        viewData = Prefecture.allCases.filter { areaIds.contains($0.id) }
     }
 }

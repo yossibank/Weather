@@ -110,6 +110,61 @@ enum Prefecture: String, CaseIterable {
         }
     }
 
+    var id: Int {
+
+        switch self {
+
+        case .hokkaido : return 0
+        case .aomori   : return 1
+        case .iwate    : return 1
+        case .miyagi   : return 1
+        case .akita    : return 1
+        case .yamagata : return 1
+        case .fukushima: return 1
+        case .ibaraki  : return 2
+        case .tochigi  : return 2
+        case .gunma    : return 2
+        case .saitama  : return 2
+        case .chiba    : return 2
+        case .tokyo    : return 2
+        case .kanagawa : return 2
+        case .niigata  : return 3
+        case .toyama   : return 3
+        case .ishikawa : return 3
+        case .fukui    : return 3
+        case .yamanashi: return 3
+        case .nagano   : return 3
+        case .gifu     : return 3
+        case .shizuoka : return 3
+        case .aichi    : return 3
+        case .mie      : return 4
+        case .shiga    : return 4
+        case .kyoto    : return 4
+        case .osaka    : return 4
+        case .hyogo    : return 4
+        case .nara     : return 4
+        case .wakayama : return 4
+        case .tottori  : return 5
+        case .shimane  : return 5
+        case .okayama  : return 5
+        case .hiroshima: return 5
+        case .yamaguchi: return 5
+        case .tokushima: return 6
+        case .kagawa   : return 6
+        case .ehime    : return 6
+        case .kochi    : return 6
+        case .fukuoka  : return 7
+        case .saga     : return 7
+        case .nagasaki : return 7
+        case .kumamoto : return 7
+        case .oita     : return 7
+        case .miyazaki : return 7
+        case .kagoshima: return 7
+        case .okinawa  : return 7
+
+        }
+    }
+
     var apiName: String {
 
         switch self {

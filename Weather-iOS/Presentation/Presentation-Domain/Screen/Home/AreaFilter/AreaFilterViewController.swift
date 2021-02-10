@@ -1,12 +1,18 @@
 import UIKit
 
+protocol AreaFilterTappedDelegate: AnyObject {
+    func didSelectAreaFilter(areaIds: [Int])
+}
+
 final class AreaFilterViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
     let viewSize = CGSize(width: 160, height: 44 * 8)
 
-    private let viewData = Area.allCases.map { $0 }
+    weak var delegate: AreaFilterTappedDelegate?
+
+    private var viewData = Area.allCases.map { $0 }
 
     private var viewModel: AreaFilterViewModel!
 
@@ -48,6 +54,8 @@ extension AreaFilterViewController: UITableViewDelegate {
             areaFilterCell.checkButton.setImage(image, for: .normal)
             areaFilterCell.checkButton.isSelected = !areaFilterCell.checkButton.isSelected
         }
+
+        delegate?.didSelectAreaFilter(areaIds: UserDefaults.areaIds)
     }
 }
 
