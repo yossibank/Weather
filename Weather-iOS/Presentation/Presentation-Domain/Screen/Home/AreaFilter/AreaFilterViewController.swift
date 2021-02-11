@@ -1,12 +1,26 @@
 import UIKit
 
+protocol AreaFilterTappedDelegate: AnyObject {
+    func didSelectAreaFilter(areaIds: [Int])
+}
+
 final class AreaFilterViewController: UIViewController {
 
-    let viewSize = CGSize(width: 160, height: 44 * 8)
-
-    private let viewData = Region.allCases.map { $0 }
-
     @IBOutlet weak var tableView: UITableView!
+
+    let viewSize = CGSize(width: 160, height: 40 * 8)
+
+    weak var delegate: AreaFilterTappedDelegate?
+
+    private let viewData = Area.allCases.map { $0 }
+
+    private var viewModel: AreaFilterViewModel!
+
+    static func createInstance(viewModel: AreaFilterViewModel) -> AreaFilterViewController {
+        let instance = AreaFilterViewController.instantiateInitialViewController()
+        instance.viewModel = viewModel
+        return instance
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +31,7 @@ final class AreaFilterViewController: UIViewController {
         tableView.register(AreaFilterTableViewCell.xib(), forCellReuseIdentifier: AreaFilterTableViewCell.resourceName)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 44
+        tableView.rowHeight = 40
     }
 }
 
@@ -28,6 +42,20 @@ extension AreaFilterViewController: UITableViewDelegate {
         didSelectRowAt indexPath: IndexPath
     ) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        viewModel.updateAreaIds(areaId: indexPath.row)
+
+        if let cell = tableView.cellForRow(at: indexPath),
+           let areaFilterCell = cell as? AreaFilterTableViewCell
+        {
+            let image = viewModel.areaIds.contains(indexPath.row) ?
+                Resources.Images.General.checkIn :
+                Resources.Images.General.checkOff
+
+            areaFilterCell.checkImageView.image = image
+        }
+
+        delegate?.didSelectAreaFilter(areaIds: UserDefaults.areaIds)
     }
 }
 
@@ -49,11 +77,15 @@ extension AreaFilterViewController: UITableViewDataSource {
             for: indexPath
         )
 
-        if let cell = cell as? AreaFilterTableViewCell {
+        if let item = viewData.any(at: indexPath.row),
+           let areaFilterCell = cell as? AreaFilterTableViewCell
+        {
+            let image = viewModel.areaIds.contains(indexPath.row) ?
+                Resources.Images.General.checkIn :
+                Resources.Images.General.checkOff
 
-            if let item = viewData.any(at: indexPath.row) {
-                cell.setup(item: item)
-            }
+            areaFilterCell.checkImageView.image = image
+            areaFilterCell.setup(item: item)
         }
 
         return cell

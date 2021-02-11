@@ -1,3 +1,4 @@
+import Foundation
 import UIKit
 
 @main
@@ -15,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = router.initialWindow(.home, type: .navigation)
         window?.makeKeyAndVisible()
+
+        UserDefaults.areaIds = Area.allCases.compactMap { $0.id }
 
         return true
     }

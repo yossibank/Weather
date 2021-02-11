@@ -17,28 +17,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="336" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LC-Rj-BGW">
-                        <rect key="frame" x="10" y="12" width="32" height="32"/>
-                        <state key="normal" image="check_in"/>
-                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_in" translatesAutoresizingMaskIntoConstraints="NO" id="V6a-pw-NOa">
+                        <rect key="frame" x="10" y="18" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="BNh-hq-ndg"/>
+                            <constraint firstAttribute="width" constant="20" id="SAN-sL-vzF"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地方名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-KI-Oif">
-                        <rect key="frame" x="62" y="20" width="48" height="16"/>
+                        <rect key="frame" x="50" y="20" width="48" height="16"/>
                         <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9LC-Rj-BGW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="BcD-Bv-Ljd"/>
-                    <constraint firstItem="zpe-KI-Oif" firstAttribute="leading" secondItem="9LC-Rj-BGW" secondAttribute="trailing" constant="20" id="Iuh-uK-QKw"/>
+                    <constraint firstItem="zpe-KI-Oif" firstAttribute="leading" secondItem="V6a-pw-NOa" secondAttribute="trailing" constant="20" id="4RV-dQ-MLJ"/>
                     <constraint firstItem="zpe-KI-Oif" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PyR-Db-TiA"/>
-                    <constraint firstItem="9LC-Rj-BGW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YYu-LH-wjx"/>
+                    <constraint firstItem="V6a-pw-NOa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RSP-Q0-xzm"/>
+                    <constraint firstItem="V6a-pw-NOa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Uya-Kq-3MR"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="checkButton" destination="9LC-Rj-BGW" id="QUV-6O-chz"/>
-                <outlet property="regionNameLabel" destination="zpe-KI-Oif" id="oYV-6Q-K52"/>
+                <outlet property="areaNameLabel" destination="zpe-KI-Oif" id="oYV-6Q-K52"/>
+                <outlet property="checkImageView" destination="V6a-pw-NOa" id="Ro4-db-30M"/>
             </connections>
             <point key="canvasLocation" x="14.492753623188406" y="93.75"/>
         </tableViewCell>

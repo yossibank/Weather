@@ -1,9 +1,9 @@
 import UIKit
 
-class AreaFilterTableViewCell: UITableViewCell {
+final class AreaFilterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var checkButton: UIButton!
-    @IBOutlet weak var regionNameLabel: UILabel!
+    @IBOutlet weak var checkImageView: UIImageView!
+    @IBOutlet weak var areaNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -13,7 +13,7 @@ class AreaFilterTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func setup(item: Region) {
-        regionNameLabel.text = item.name
+    func setup(item: Area) {
+        areaNameLabel.text = item.name
     }
 }
