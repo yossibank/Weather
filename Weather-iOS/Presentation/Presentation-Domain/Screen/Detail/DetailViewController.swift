@@ -18,38 +18,43 @@ final class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setWeatherData()
+        fetchWeatherData()
     }
-    
-    private func setWeatherData() {
-        viewModel.fetchWeatherData { result in
+
+    private func fetchWeatherData() {
+        viewModel.fetchWeatherData { [weak self] result in
+            guard let self = self else { return }
 
             switch result {
 
             case .success(let weatherData):
-                self.weatherLabel.text = weatherData.weatherName
-                
-                ImageLoader.shared.loadImage(
-                    with: .string(urlSring: "https://openweathermap.org/img/w/\(weatherData.weatherImageUrlString).png")
-                ) { image, _ in
-                    self.weatherImageView.image = image
-                }
-
-                self.highestTemperatureLabel.text = Resources.Strings.Weather.highestTemperature
-                    + Double.convertCelsiusToString(weatherData.highestTemperature)
-                    + Resources.Strings.Weather.degree
-
-                self.lowestTemperatureLabel.text = Resources.Strings.Weather.lowestTemperature
-                    + Double.convertCelsiusToString(weatherData.lowestTemperature)
-                    + Resources.Strings.Weather.degree
-
-                self.dateLabel.text = Date
-                    .fromConvertToDate(time: weatherData.date)
-                    .toConvertString(with: .yearToDayOfWeekJapanase)
+                self.setWeatherData(weatherData: weatherData)
 
             case .failure(let error):
                 dump(error.description())
             }
         }
+    }
+
+    private func setWeatherData(weatherData: DetailViewData) {
+        self.weatherLabel.text = weatherData.weatherName.description
+
+        ImageLoader.shared.loadImage(
+            with: .string(urlSring: "https://openweathermap.org/img/w/\(weatherData.weatherImageUrlString).png")
+        ) { image, _ in
+            self.weatherImageView.image = image
+        }
+
+        self.highestTemperatureLabel.text = Resources.Strings.Weather.highestTemperature
+            + Double.convertCelsiusToString(weatherData.highestTemperature)
+            + Resources.Strings.Weather.degree
+
+        self.lowestTemperatureLabel.text = Resources.Strings.Weather.lowestTemperature
+            + Double.convertCelsiusToString(weatherData.lowestTemperature)
+            + Resources.Strings.Weather.degree
+
+        self.dateLabel.text = Date
+            .fromConvertToDate(time: weatherData.date)
+            .toConvertString(with: .yearToDayOfWeekJapanase)
     }
 }

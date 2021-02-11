@@ -1,12 +1,12 @@
 struct DetailViewData {
     var date: Double
     var weatherImageUrlString: String
-    var weatherName: String
+    var weatherName: WeatherDescription
     var highestTemperature: Double
     var lowestTemperature: Double
 }
 
-enum WeatherDescription: String {
+enum WeatherDescription: String, CaseIterable {
     case thunderstorm = "thunderstorm"
     case drizzle      = "Drizzle"
     case rain         = "Rain"
@@ -22,6 +22,7 @@ enum WeatherDescription: String {
     case tornado      = "Tronado"
     case clear        = "Clear"
     case clouds       = "Clouds"
+    case unknown      = "Unknown"
 
     var description: String {
 
@@ -42,6 +43,7 @@ enum WeatherDescription: String {
         case .tornado:      return "竜巻"
         case .clear:        return "晴れ"
         case .clouds:       return "曇り"
+        case .unknown:      return "不明"
 
         }
     }
