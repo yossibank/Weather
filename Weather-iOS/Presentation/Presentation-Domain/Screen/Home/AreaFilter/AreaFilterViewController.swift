@@ -8,11 +8,11 @@ final class AreaFilterViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let viewSize = CGSize(width: 160, height: 44 * 8)
+    let viewSize = CGSize(width: 160, height: 40 * 8)
 
     weak var delegate: AreaFilterTappedDelegate?
 
-    private var viewData = Area.allCases.map { $0 }
+    private let viewData = Area.allCases.map { $0 }
 
     private var viewModel: AreaFilterViewModel!
 
@@ -31,7 +31,7 @@ final class AreaFilterViewController: UIViewController {
         tableView.register(AreaFilterTableViewCell.xib(), forCellReuseIdentifier: AreaFilterTableViewCell.resourceName)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 44
+        tableView.rowHeight = 40
     }
 }
 
@@ -45,14 +45,14 @@ extension AreaFilterViewController: UITableViewDelegate {
 
         viewModel.updateAreaIds(areaId: indexPath.row)
 
-        let cell = tableView.cellForRow(at: indexPath)
-        if let areaFilterCell = cell as? AreaFilterTableViewCell {
+        if let cell = tableView.cellForRow(at: indexPath),
+           let areaFilterCell = cell as? AreaFilterTableViewCell
+        {
             let image = UserDefaults.areaIds.contains(indexPath.row) ?
                 Resources.Images.General.checkIn :
                 Resources.Images.General.checkOff
 
-            areaFilterCell.checkButton.setImage(image, for: .normal)
-            areaFilterCell.checkButton.isSelected = !areaFilterCell.checkButton.isSelected
+            areaFilterCell.checkImageView.image = image
         }
 
         delegate?.didSelectAreaFilter(areaIds: UserDefaults.areaIds)
@@ -83,7 +83,7 @@ extension AreaFilterViewController: UITableViewDataSource {
                     Resources.Images.General.checkIn :
                     Resources.Images.General.checkOff
 
-                areaFilterCell.checkButton.setImage(image, for: .normal)
+                areaFilterCell.checkImageView.image = image
                 areaFilterCell.setup(item: item)
             }
         }

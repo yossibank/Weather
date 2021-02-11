@@ -2,7 +2,7 @@ import UIKit
 
 final class AreaFilterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var checkImageView: UIImageView!
     @IBOutlet weak var areaNameLabel: UILabel!
 
     override func awakeFromNib() {
