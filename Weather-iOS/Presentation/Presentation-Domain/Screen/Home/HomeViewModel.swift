@@ -1,5 +1,9 @@
 import UIKit
 
+protocol FavoriteButtonDelegate: AnyObject {
+    func didSelectFavoriteButton(at index: Int)
+}
+
 final class HomeViewModel: NSObject, UITableViewDataSource {
 
     var cellData = Prefecture.allCases.map { $0 }
@@ -10,6 +14,16 @@ final class HomeViewModel: NSObject, UITableViewDataSource {
         }
         set {
             UserDefaults.prefectureNames = newValue
+        }
+    }
+
+    weak var delegate: FavoriteButtonDelegate?
+
+    func setupFavoritePrefecture(_ prefectureName: String) {
+        if favoritePrefecture.contains(prefectureName) {
+            favoritePrefecture.remove(value: prefectureName)
+        } else {
+            favoritePrefecture.append(prefectureName)
         }
     }
 }
@@ -38,7 +52,6 @@ extension HomeViewModel {
         {
             homeCell.accessoryType = .disclosureIndicator
             homeCell.delegate = self
-            homeCell.tableView = tableView
             homeCell.favoriteButton.tag = indexPath.row
             homeCell.setup(item: item)
 
@@ -55,23 +68,7 @@ extension HomeViewModel {
 
 extension HomeViewModel: HomeCellDelegate {
 
-    func didSelectFavoriteButton(
-        at index: Int,
-        in tableView: UITableView?
-    ) {
-        guard let cellData = cellData.any(at: index) else {
-            return
-        }
-
-        if favoritePrefecture.contains(cellData.name) {
-            favoritePrefecture.remove(value: cellData.name)
-        } else {
-            favoritePrefecture.append(cellData.name)
-        }
-
-        tableView?.reloadRows(
-            at: [IndexPath(row: index, section: 0)],
-            with: .fade
-        )
+    func didSelectFavoriteButton(at index: Int) {
+        delegate?.didSelectFavoriteButton(at: index)
     }
 }

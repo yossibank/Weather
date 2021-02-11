@@ -19,8 +19,13 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDelegate()
         setupButton()
         setupTableView()
+    }
+
+    private func setupDelegate() {
+        viewModel.delegate = self
     }
 
     private func setupButton() {
@@ -84,5 +89,21 @@ extension HomeViewController: AreaFilterTappedDelegate {
     func didSelectAreaFilter(areaIds: [Int]) {
         viewModel.cellData = Prefecture.allCases.filter { areaIds.contains($0.id) }
         tableView.reloadData()
+    }
+}
+
+extension HomeViewController: FavoriteButtonDelegate {
+
+    func didSelectFavoriteButton(at index: Int) {
+        guard let cellData = viewModel.cellData.any(at: index) else {
+            return
+        }
+
+        viewModel.setupFavoritePrefecture(cellData.name)
+
+        tableView.reloadRows(
+            at: [IndexPath(row: index, section: 0)],
+            with: .fade
+        )
     }
 }

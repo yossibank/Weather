@@ -1,10 +1,7 @@
 import UIKit
 
 protocol HomeCellDelegate: AnyObject {
-    func didSelectFavoriteButton(
-        at index: Int,
-        in tableView: UITableView?
-    )
+    func didSelectFavoriteButton(at index: Int)
 }
 
 final class HomeTableViewCell: UITableViewCell {
@@ -21,7 +18,6 @@ final class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var prefectureNameLabel: UILabel!
 
     weak var delegate: HomeCellDelegate?
-    weak var tableView: UITableView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,9 +32,6 @@ final class HomeTableViewCell: UITableViewCell {
     }
 
     @objc private func favoriteButtonTapped(_ sender: UIButton) {
-        delegate?.didSelectFavoriteButton(
-            at: sender.tag,
-            in: tableView
-        )
+        delegate?.didSelectFavoriteButton(at: sender.tag)
     }
 }
