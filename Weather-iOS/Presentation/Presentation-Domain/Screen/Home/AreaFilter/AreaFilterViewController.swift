@@ -77,15 +77,15 @@ extension AreaFilterViewController: UITableViewDataSource {
             for: indexPath
         )
 
-        if let areaFilterCell = cell as? AreaFilterTableViewCell {
-            if let item = viewData.any(at: indexPath.row) {
-                let image = UserDefaults.areaIds.contains(indexPath.row) ?
-                    Resources.Images.General.checkIn :
-                    Resources.Images.General.checkOff
+        if let item = viewData.any(at: indexPath.row),
+           let areaFilterCell = cell as? AreaFilterTableViewCell
+        {
+            let image = UserDefaults.areaIds.contains(indexPath.row) ?
+                Resources.Images.General.checkIn :
+                Resources.Images.General.checkOff
 
-                areaFilterCell.checkImageView.image = image
-                areaFilterCell.setup(item: item)
-            }
+            areaFilterCell.checkImageView.image = image
+            areaFilterCell.setup(item: item)
         }
 
         return cell
