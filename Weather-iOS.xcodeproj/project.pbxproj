@@ -44,6 +44,7 @@
 		78A4EB9C25CFBB6100AF0E2D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */; };
 		78A4EBA225CFC2FB00AF0E2D /* AreaFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4EBA025CFC2FB00AF0E2D /* AreaFilterTableViewCell.swift */; };
 		78A4EBA325CFC2FB00AF0E2D /* AreaFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A4EBA125CFC2FB00AF0E2D /* AreaFilterTableViewCell.xib */; };
+		78A6556B25D4C52800A05B1C /* AreaFilterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A6556A25D4C52800A05B1C /* AreaFilterDataSource.swift */; };
 		78B57C6525CFE7540032E8D2 /* AreaFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B57C6425CFE7540032E8D2 /* AreaFilterViewModel.swift */; };
 		78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D052B825CE7295003121FC /* AppConfigurator.swift */; };
 		78E7B45525CEBA5B009AFCF7 /* Array+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */; };
@@ -106,6 +107,7 @@
 		78A4EB9B25CFBB6100AF0E2D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		78A4EBA025CFC2FB00AF0E2D /* AreaFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFilterTableViewCell.swift; sourceTree = "<group>"; };
 		78A4EBA125CFC2FB00AF0E2D /* AreaFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaFilterTableViewCell.xib; sourceTree = "<group>"; };
+		78A6556A25D4C52800A05B1C /* AreaFilterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFilterDataSource.swift; sourceTree = "<group>"; };
 		78B57C6425CFE7540032E8D2 /* AreaFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaFilterViewModel.swift; sourceTree = "<group>"; };
 		78D052B825CE7295003121FC /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		78E7B45425CEBA5B009AFCF7 /* Array+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Util.swift"; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 			children = (
 				78A4EB9F25CFC2C500AF0E2D /* View */,
 				78B57C6425CFE7540032E8D2 /* AreaFilterViewModel.swift */,
+				78A6556A25D4C52800A05B1C /* AreaFilterDataSource.swift */,
 				782E202425CFB61000657A36 /* AreaFilterViewController.swift */,
 				782E202A25CFB62000657A36 /* AreaFilterViewController.storyboard */,
 			);
@@ -720,6 +723,7 @@
 				780E715825C6BC21002EE6CB /* Resources.swift in Sources */,
 				785F769A25CE782000251416 /* WeatherDetailRequest.swift in Sources */,
 				7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */,
+				78A6556B25D4C52800A05B1C /* AreaFilterDataSource.swift in Sources */,
 				785F769225CE75FA00251416 /* String+Util.swift in Sources */,
 				78D052B925CE7295003121FC /* AppConfigurator.swift in Sources */,
 				787D52C125D2AB86001D01E3 /* UserDefaults+Extension.swift in Sources */,

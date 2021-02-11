@@ -2,6 +2,8 @@ import Foundation
 
 final class AreaFilterViewModel {
 
+    var areaFilter = Area.allCases.map { $0 }
+
     var areaIds: [Int] {
         get {
             UserDefaults.areaIds
