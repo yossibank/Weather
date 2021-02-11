@@ -2,11 +2,20 @@ import Foundation
 
 final class AreaFilterViewModel {
 
+    var areaIds: [Int] {
+        get {
+            UserDefaults.areaIds
+        }
+        set {
+            UserDefaults.areaIds = newValue
+        }
+    }
+
     func updateAreaIds(areaId: Int) {
-        if UserDefaults.areaIds.contains(areaId) {
-            UserDefaults.areaIds.remove(value: areaId)
+        if areaIds.contains(areaId) {
+            areaIds.remove(value: areaId)
         } else {
-            UserDefaults.areaIds.append(areaId)
+            areaIds.append(areaId)
         }
     }
 }

@@ -48,7 +48,7 @@ extension AreaFilterViewController: UITableViewDelegate {
         if let cell = tableView.cellForRow(at: indexPath),
            let areaFilterCell = cell as? AreaFilterTableViewCell
         {
-            let image = UserDefaults.areaIds.contains(indexPath.row) ?
+            let image = viewModel.areaIds.contains(indexPath.row) ?
                 Resources.Images.General.checkIn :
                 Resources.Images.General.checkOff
 
@@ -80,7 +80,7 @@ extension AreaFilterViewController: UITableViewDataSource {
         if let item = viewData.any(at: indexPath.row),
            let areaFilterCell = cell as? AreaFilterTableViewCell
         {
-            let image = UserDefaults.areaIds.contains(indexPath.row) ?
+            let image = viewModel.areaIds.contains(indexPath.row) ?
                 Resources.Images.General.checkIn :
                 Resources.Images.General.checkOff
 
