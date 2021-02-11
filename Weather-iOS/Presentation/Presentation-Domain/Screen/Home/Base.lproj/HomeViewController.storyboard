@@ -87,6 +87,7 @@
                     </view>
                     <connections>
                         <outlet property="areaFilterButton" destination="JMl-aT-hXs" id="aTg-Yb-AVh"/>
+                        <outlet property="favoriteButton" destination="MQx-j7-OMK" id="WJ6-pj-1g0"/>
                         <outlet property="tableView" destination="Mut-ab-hHd" id="4Ev-HM-468"/>
                     </connections>
                 </viewController>

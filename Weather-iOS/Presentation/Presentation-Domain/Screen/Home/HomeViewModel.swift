@@ -26,6 +26,16 @@ final class HomeViewModel: NSObject, UITableViewDataSource {
             favoritePrefecture.append(prefectureName)
         }
     }
+
+    func filteringFavoritePrefecture(isSelected: Bool) {
+        if isSelected {
+            cellData = Prefecture.allCases.filter {
+                favoritePrefecture.contains($0.name)
+            }
+        } else {
+            cellData = Prefecture.allCases.map { $0 }
+        }
+    }
 }
 
 extension HomeViewModel {
