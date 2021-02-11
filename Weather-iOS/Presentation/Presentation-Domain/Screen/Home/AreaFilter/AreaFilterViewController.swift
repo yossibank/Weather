@@ -13,9 +13,10 @@ final class AreaFilterViewController: UIViewController {
     weak var delegate: AreaFilterTappedDelegate?
 
     private var viewModel: AreaFilterViewModel!
-    private var dataSource: AreaFilterDataSource!
 
-    static func createInstance(viewModel: AreaFilterViewModel) -> AreaFilterViewController {
+    static func createInstance(
+        viewModel: AreaFilterViewModel = AreaFilterViewModel()
+    ) -> AreaFilterViewController {
         let instance = AreaFilterViewController.instantiateInitialViewController()
         instance.viewModel = viewModel
         return instance
@@ -27,9 +28,8 @@ final class AreaFilterViewController: UIViewController {
     }
 
     private func setupTableView() {
-        dataSource = AreaFilterDataSource(viewModel: viewModel)
         tableView.register(AreaFilterTableViewCell.xib(), forCellReuseIdentifier: AreaFilterTableViewCell.resourceName)
-        tableView.dataSource = dataSource
+        tableView.dataSource = viewModel
         tableView.delegate = self
         tableView.rowHeight = 40
     }

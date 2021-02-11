@@ -1,8 +1,8 @@
-import Foundation
+import UIKit
 
-final class AreaFilterViewModel {
+final class AreaFilterViewModel: NSObject, UITableViewDataSource {
 
-    var areaFilter = Area.allCases.map { $0 }
+    var cellData = Area.allCases.map { $0 }
 
     var areaIds: [Int] {
         get {
@@ -19,5 +19,39 @@ final class AreaFilterViewModel {
         } else {
             areaIds.append(areaId)
         }
+    }
+}
+
+extension AreaFilterViewModel {
+
+    func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        cellData.count
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: AreaFilterTableViewCell.resourceName,
+            for: indexPath
+        )
+
+        if let areaFilterCell = cell as? AreaFilterTableViewCell,
+           let item = cellData.any(at: indexPath.row)
+        {
+            let image = areaIds.contains(indexPath.row) ?
+                Resources.Images.General.checkIn :
+                Resources.Images.General.checkOff
+
+            areaFilterCell.checkImageView.image = image
+            areaFilterCell.setup(item: item)
+        }
+
+        return cell
     }
 }

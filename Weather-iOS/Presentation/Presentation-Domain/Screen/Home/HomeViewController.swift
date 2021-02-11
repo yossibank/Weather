@@ -2,19 +2,18 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
-    private let router: RouterProtocol = Router()
-
-    private var viewData = Prefecture.allCases.map { $0 } {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var areaFilterButton: UIButton!
 
-    static func createInstance() -> HomeViewController {
+    private let router: RouterProtocol = Router()
+
+    private var viewModel: HomeViewModel!
+
+    static func createInstance(
+        viewModel: HomeViewModel = HomeViewModel()
+    ) -> HomeViewController {
         let instance = HomeViewController.instantiateInitialViewController()
+        instance.viewModel = viewModel
         return instance
     }
 
@@ -34,8 +33,8 @@ final class HomeViewController: UIViewController {
 
     private func setupTableView() {
         tableView.register(HomeTableViewCell.xib(), forCellReuseIdentifier: HomeTableViewCell.resourceName)
+        tableView.dataSource = viewModel
         tableView.delegate = self
-        tableView.dataSource = self
         tableView.rowHeight = 50
     }
 }
@@ -43,7 +42,7 @@ final class HomeViewController: UIViewController {
 extension HomeViewController {
 
     @objc private func areaFilterButtonTapped(_ button: UIButton) {
-        let areaFilterVC = AreaFilterViewController.createInstance(viewModel: AreaFilterViewModel())
+        let areaFilterVC = AreaFilterViewController.createInstance()
         areaFilterVC.delegate = self
 
         showPopover(
@@ -74,45 +73,16 @@ extension HomeViewController: UITableViewDelegate {
     ) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        if let cityName = viewData.any(at: indexPath.row)?.apiName {
+        if let cityName = viewModel.cellData.any(at: indexPath.row)?.apiName {
             router.push(.detail(cityName: cityName), from: self)
         }
-    }
-}
-
-extension HomeViewController: UITableViewDataSource {
-
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
-        viewData.count
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-                withIdentifier: HomeTableViewCell.resourceName,
-                for: indexPath
-        )
-
-        if let cell = cell as? HomeTableViewCell {
-            cell.accessoryType = .disclosureIndicator
-
-            if let item = viewData.any(at: indexPath.row) {
-                cell.setup(item: item)
-            }
-        }
-
-        return cell
     }
 }
 
 extension HomeViewController: AreaFilterTappedDelegate {
 
     func didSelectAreaFilter(areaIds: [Int]) {
-        viewData = Prefecture.allCases.filter { areaIds.contains($0.id) }
+        viewModel.cellData = Prefecture.allCases.filter { areaIds.contains($0.id) }
+        tableView.reloadData()
     }
 }
