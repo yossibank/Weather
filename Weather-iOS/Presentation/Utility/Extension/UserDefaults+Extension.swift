@@ -3,6 +3,7 @@ import Foundation
 extension UserDefaults {
 
     enum Keys: String, CaseIterable {
+        case prefectureNames
         case areaIds
     }
 
@@ -11,6 +12,15 @@ extension UserDefaults {
     }
 
     static private let userDefaults = UserDefaults.standard
+
+    static var prefectureNames: [String] {
+        get {
+            return userDefaults.array(forKey: accessKey(.prefectureNames)) as? [String] ?? []
+        }
+        set {
+            userDefaults.setValue(newValue, forKey: accessKey(.prefectureNames))
+        }
+    }
 
     static var areaIds: [Int] {
         get {
