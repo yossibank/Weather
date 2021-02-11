@@ -1,9 +1,23 @@
 import UIKit
 
+protocol HomeCellDelegate: AnyObject {
+    func didSelectFavoriteButton(at index: Int)
+}
+
 final class HomeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton! {
+        didSet {
+            favoriteButton.addTarget(
+                self,
+                action: #selector(favoriteButtonTapped(_:)),
+                for: .touchUpInside
+            )
+        }
+    }
     @IBOutlet weak var prefectureNameLabel: UILabel!
+
+    weak var delegate: HomeCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -15,5 +29,9 @@ final class HomeTableViewCell: UITableViewCell {
 
     func setup(item: Prefecture) {
         prefectureNameLabel.text = item.name
+    }
+
+    @objc private func favoriteButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectFavoriteButton(at: sender.tag)
     }
 }

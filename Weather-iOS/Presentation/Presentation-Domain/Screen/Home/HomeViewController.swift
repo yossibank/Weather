@@ -3,6 +3,7 @@ import UIKit
 final class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var areaFilterButton: UIButton!
 
     private let router: RouterProtocol = Router()
@@ -19,11 +20,22 @@ final class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDelegate()
         setupButton()
         setupTableView()
     }
 
+    private func setupDelegate() {
+        viewModel.delegate = self
+    }
+
     private func setupButton() {
+        favoriteButton.addTarget(
+            self,
+            action: #selector(favoriteButtonTapped(_:)),
+            for: .touchUpInside
+        )
+
         areaFilterButton.addTarget(
             self,
             action: #selector(areaFilterButtonTapped(_:)),
@@ -40,6 +52,18 @@ final class HomeViewController: UIViewController {
 }
 
 extension HomeViewController {
+
+    @objc private func favoriteButtonTapped(_ button: UIButton) {
+        favoriteButton.isSelected = !favoriteButton.isSelected
+
+        let image = favoriteButton.isSelected ?
+            Resources.Images.General.checkIn :
+            Resources.Images.General.checkOff
+        favoriteButton.setImage(image, for: .normal)
+
+        viewModel.filteringFavoritePrefecture(isSelected: favoriteButton.isSelected)
+        tableView.reloadData()
+    }
 
     @objc private func areaFilterButtonTapped(_ button: UIButton) {
         let areaFilterVC = AreaFilterViewController.createInstance()
@@ -84,5 +108,21 @@ extension HomeViewController: AreaFilterTappedDelegate {
     func didSelectAreaFilter(areaIds: [Int]) {
         viewModel.cellData = Prefecture.allCases.filter { areaIds.contains($0.id) }
         tableView.reloadData()
+    }
+}
+
+extension HomeViewController: FavoriteButtonDelegate {
+
+    func didSelectFavoriteButton(at index: Int) {
+        guard let cellData = viewModel.cellData.any(at: index) else {
+            return
+        }
+
+        viewModel.setupFavoritePrefecture(cellData.name)
+
+        tableView.reloadRows(
+            at: [IndexPath(row: index, section: 0)],
+            with: .fade
+        )
     }
 }
