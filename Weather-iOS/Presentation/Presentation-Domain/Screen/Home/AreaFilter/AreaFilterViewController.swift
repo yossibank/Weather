@@ -12,11 +12,11 @@ final class AreaFilterViewController: UIViewController {
 
     weak var delegate: AreaFilterTappedDelegate?
 
-    private let viewData = Area.allCases.map { $0 }
-
     private var viewModel: AreaFilterViewModel!
 
-    static func createInstance(viewModel: AreaFilterViewModel) -> AreaFilterViewController {
+    static func createInstance(
+        viewModel: AreaFilterViewModel = AreaFilterViewModel()
+    ) -> AreaFilterViewController {
         let instance = AreaFilterViewController.instantiateInitialViewController()
         instance.viewModel = viewModel
         return instance
@@ -29,8 +29,8 @@ final class AreaFilterViewController: UIViewController {
 
     private func setupTableView() {
         tableView.register(AreaFilterTableViewCell.xib(), forCellReuseIdentifier: AreaFilterTableViewCell.resourceName)
+        tableView.dataSource = viewModel
         tableView.delegate = self
-        tableView.dataSource = self
         tableView.rowHeight = 40
     }
 }
@@ -55,39 +55,6 @@ extension AreaFilterViewController: UITableViewDelegate {
             areaFilterCell.checkImageView.image = image
         }
 
-        delegate?.didSelectAreaFilter(areaIds: UserDefaults.areaIds)
-    }
-}
-
-extension AreaFilterViewController: UITableViewDataSource {
-
-    func tableView(
-        _ tableView: UITableView,
-        numberOfRowsInSection section: Int
-    ) -> Int {
-        viewData.count
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: AreaFilterTableViewCell.resourceName,
-            for: indexPath
-        )
-
-        if let item = viewData.any(at: indexPath.row),
-           let areaFilterCell = cell as? AreaFilterTableViewCell
-        {
-            let image = viewModel.areaIds.contains(indexPath.row) ?
-                Resources.Images.General.checkIn :
-                Resources.Images.General.checkOff
-
-            areaFilterCell.checkImageView.image = image
-            areaFilterCell.setup(item: item)
-        }
-
-        return cell
+        delegate?.didSelectAreaFilter(areaIds: viewModel.areaIds)
     }
 }
