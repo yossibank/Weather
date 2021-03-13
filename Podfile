@@ -1,14 +1,14 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '13.0'
 
-target 'Weather-iOS' do
+target 'Weather' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Weather-iOS
+  # Pods for Weather
   pod 'R.swift'
 
-  target 'Weather-iOSTests' do
+  target 'WeatherTests' do
     inherit! :search_paths
     # Pods for testing
   end
