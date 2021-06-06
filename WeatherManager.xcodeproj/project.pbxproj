@@ -72,14 +72,14 @@
 		780E714F25C6BC0B002EE6CB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		780E715325C6BC12002EE6CB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		780E715725C6BC21002EE6CB /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		7820DCAA25C687F0007E3CEB /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7820DCAA25C687F0007E3CEB /* WeatherManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7820DCAD25C687F0007E3CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7820DCB125C687F0007E3CEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7820DCB425C687F0007E3CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		7820DCB625C687F2007E3CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7820DCB925C687F2007E3CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7820DCBB25C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7820DCC025C687F2007E3CEB /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7820DCC025C687F2007E3CEB /* WeatherManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSTests.swift; sourceTree = "<group>"; };
 		7820DCC625C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-IBInspectable-Extension.swift"; sourceTree = "<group>"; };
@@ -302,8 +302,8 @@
 		7820DCA125C687F0007E3CEB = {
 			isa = PBXGroup;
 			children = (
-				7820DCAC25C687F0007E3CEB /* Weather */,
-				7820DCC325C687F2007E3CEB /* WeatherTests */,
+				7820DCAC25C687F0007E3CEB /* WeatherManager */,
+				7820DCC325C687F2007E3CEB /* WeatherManagerTests */,
 				7820DCAB25C687F0007E3CEB /* Products */,
 				A9275D4F17BCCACFD5FF8C71 /* Frameworks */,
 			);
@@ -312,13 +312,13 @@
 		7820DCAB25C687F0007E3CEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7820DCAA25C687F0007E3CEB /* Weather.app */,
-				7820DCC025C687F2007E3CEB /* WeatherTests.xctest */,
+				7820DCAA25C687F0007E3CEB /* WeatherManager.app */,
+				7820DCC025C687F2007E3CEB /* WeatherManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7820DCAC25C687F0007E3CEB /* Weather */ = {
+		7820DCAC25C687F0007E3CEB /* WeatherManager */ = {
 			isa = PBXGroup;
 			children = (
 				780E713A25C6B9E2002EE6CB /* AppConfig */,
@@ -326,16 +326,16 @@
 				780E713825C6B9D7002EE6CB /* Data */,
 				780E713725C6B9CB002EE6CB /* Presentation */,
 			);
-			path = Weather;
+			path = WeatherManager;
 			sourceTree = "<group>";
 		};
-		7820DCC325C687F2007E3CEB /* WeatherTests */ = {
+		7820DCC325C687F2007E3CEB /* WeatherManagerTests */ = {
 			isa = PBXGroup;
 			children = (
 				7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */,
 				7820DCC625C687F2007E3CEB /* Info.plist */,
 			);
-			path = WeatherTests;
+			path = WeatherManagerTests;
 			sourceTree = "<group>";
 		};
 		7826699925C8188400871A6C /* IBdesignable */ = {
@@ -474,9 +474,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7820DCA925C687F0007E3CEB /* Weather */ = {
+		7820DCA925C687F0007E3CEB /* WeatherManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "Weather" */;
+			buildConfigurationList = 7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManager" */;
 			buildPhases = (
 				7820DCF325C6912D007E3CEB /* Rswift */,
 				7820DCA625C687F0007E3CEB /* Sources */,
@@ -488,19 +488,18 @@
 			);
 			dependencies = (
 			);
-			name = Weather;
+			name = WeatherManager;
 			packageProductDependencies = (
 				780CC8E3266C9B4400597F76 /* Rswift */,
 			);
 			productName = "Weather-iOS";
-			productReference = 7820DCAA25C687F0007E3CEB /* Weather.app */;
+			productReference = 7820DCAA25C687F0007E3CEB /* WeatherManager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7820DCBF25C687F2007E3CEB /* WeatherTests */ = {
+		7820DCBF25C687F2007E3CEB /* WeatherManagerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherTests" */;
+			buildConfigurationList = 7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManagerTests" */;
 			buildPhases = (
-				12E930BF64ED4EF2479939B5 /* [CP] Check Pods Manifest.lock */,
 				7820DCBC25C687F2007E3CEB /* Sources */,
 				7820DCBD25C687F2007E3CEB /* Frameworks */,
 				7820DCBE25C687F2007E3CEB /* Resources */,
@@ -510,9 +509,9 @@
 			dependencies = (
 				7820DCC225C687F2007E3CEB /* PBXTargetDependency */,
 			);
-			name = WeatherTests;
+			name = WeatherManagerTests;
 			productName = "Weather-iOSTests";
-			productReference = 7820DCC025C687F2007E3CEB /* WeatherTests.xctest */;
+			productReference = 7820DCC025C687F2007E3CEB /* WeatherManagerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -533,7 +532,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "Weather" */;
+			buildConfigurationList = 7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "WeatherManager" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -549,8 +548,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7820DCA925C687F0007E3CEB /* Weather */,
-				7820DCBF25C687F2007E3CEB /* WeatherTests */,
+				7820DCA925C687F0007E3CEB /* WeatherManager */,
+				7820DCBF25C687F2007E3CEB /* WeatherManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -581,28 +580,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12E930BF64ED4EF2479939B5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WeatherTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		780E712C25C6AA50002EE6CB /* swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -699,7 +676,7 @@
 /* Begin PBXTargetDependency section */
 		7820DCC225C687F2007E3CEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7820DCA925C687F0007E3CEB /* Weather */;
+			target = 7820DCA925C687F0007E3CEB /* WeatherManager */;
 			targetProxy = 7820DCC125C687F2007E3CEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -846,7 +823,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Weather/AppResources/Support/InfoPlist/Info.plist;
+				INFOPLIST_FILE = WeatherManager/AppResources/Support/InfoPlist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -865,7 +842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Weather/AppResources/Support/InfoPlist/Info.plist;
+				INFOPLIST_FILE = WeatherManager/AppResources/Support/InfoPlist/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -884,7 +861,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherTests/Info.plist;
+				INFOPLIST_FILE = WeatherManagerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -895,7 +872,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherManager.app/WeatherManager";
 			};
 			name = Debug;
 		};
@@ -905,7 +882,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherTests/Info.plist;
+				INFOPLIST_FILE = WeatherManagerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -916,14 +893,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Weather.app/Weather";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherManager.app/WeatherManager";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "Weather" */ = {
+		7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "WeatherManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7820DCD225C687F2007E3CEB /* Debug */,
@@ -932,7 +909,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "Weather" */ = {
+		7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7820DCD525C687F2007E3CEB /* Debug */,
@@ -941,7 +918,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
+		7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManagerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7820DCD825C687F2007E3CEB /* Debug */,
