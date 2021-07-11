@@ -1,5 +1,5 @@
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - WeatherManager/AppResources/R/R.generated.swift
+  - Training3-Swift/AppResources/R/R.generated.swift
 disabled_rules:
   - colon
   - nesting

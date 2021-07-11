@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EF75BC699951850AF498709 /* Pods_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE1B2FACBB632FF0E585D97 /* Pods_WeatherTests.framework */; };
 		78098D8425CADD06006D62FF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78098D8325CADD06006D62FF /* Router.swift */; };
 		78098D8825CADD87006D62FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78098D8725CADD87006D62FF /* ViewController.swift */; };
 		780CC8E4266C9B4400597F76 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 780CC8E3266C9B4400597F76 /* Rswift */; };
@@ -20,7 +19,7 @@
 		7820DCB525C687F0007E3CEB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB325C687F0007E3CEB /* HomeViewController.storyboard */; };
 		7820DCB725C687F2007E3CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB625C687F2007E3CEB /* Assets.xcassets */; };
 		7820DCBA25C687F2007E3CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820DCB825C687F2007E3CEB /* LaunchScreen.storyboard */; };
-		7820DCC525C687F2007E3CEB /* Weather_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */; };
+		7820DCC525C687F2007E3CEB /* Training3SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820DCC425C687F2007E3CEB /* Training3SwiftTests.swift */; };
 		7826699C25C838B700871A6C /* UIView-IBInspectable-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */; };
 		782669A225C83A4100871A6C /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782669A125C83A4100871A6C /* IBDesignableView.swift */; };
 		782669A625C83BB100871A6C /* IBDesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782669A525C83BB100871A6C /* IBDesignableButton.swift */; };
@@ -65,22 +64,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1EDEA5A35FB20C8D90E17DC6 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78098D8325CADD06006D62FF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		78098D8725CADD87006D62FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		780E714B25C6BBDD002EE6CB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		780E714F25C6BC0B002EE6CB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		780E715325C6BC12002EE6CB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		780E715725C6BC21002EE6CB /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		7820DCAA25C687F0007E3CEB /* WeatherManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7820DCAA25C687F0007E3CEB /* Training3-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Training3-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7820DCAD25C687F0007E3CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7820DCB125C687F0007E3CEB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7820DCB425C687F0007E3CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		7820DCB625C687F2007E3CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7820DCB925C687F2007E3CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7820DCBB25C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7820DCC025C687F2007E3CEB /* WeatherManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_iOSTests.swift; sourceTree = "<group>"; };
+		7820DCC025C687F2007E3CEB /* Training3-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Training3-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7820DCC425C687F2007E3CEB /* Training3SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training3SwiftTests.swift; sourceTree = "<group>"; };
 		7820DCC625C687F2007E3CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7826699B25C838B700871A6C /* UIView-IBInspectable-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView-IBInspectable-Extension.swift"; sourceTree = "<group>"; };
 		782669A125C83A4100871A6C /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		78F336C825C6DE8C009A213C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		78F336C925C6DE8C009A213C /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		78F336D325C6E4F4009A213C /* PrefectureViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureViewData.swift; sourceTree = "<group>"; };
-		7CE1B2FACBB632FF0E585D97 /* Pods_WeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF75BC699951850AF498709 /* Pods_WeatherTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,23 +298,22 @@
 		7820DCA125C687F0007E3CEB = {
 			isa = PBXGroup;
 			children = (
-				7820DCAC25C687F0007E3CEB /* WeatherManager */,
-				7820DCC325C687F2007E3CEB /* WeatherManagerTests */,
+				7820DCAC25C687F0007E3CEB /* Training3-Swift */,
+				7820DCC325C687F2007E3CEB /* Training3-SwiftTests */,
 				7820DCAB25C687F0007E3CEB /* Products */,
-				A9275D4F17BCCACFD5FF8C71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		7820DCAB25C687F0007E3CEB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7820DCAA25C687F0007E3CEB /* WeatherManager.app */,
-				7820DCC025C687F2007E3CEB /* WeatherManagerTests.xctest */,
+				7820DCAA25C687F0007E3CEB /* Training3-Swift.app */,
+				7820DCC025C687F2007E3CEB /* Training3-SwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7820DCAC25C687F0007E3CEB /* WeatherManager */ = {
+		7820DCAC25C687F0007E3CEB /* Training3-Swift */ = {
 			isa = PBXGroup;
 			children = (
 				780E713A25C6B9E2002EE6CB /* AppConfig */,
@@ -326,16 +321,16 @@
 				780E713825C6B9D7002EE6CB /* Data */,
 				780E713725C6B9CB002EE6CB /* Presentation */,
 			);
-			path = WeatherManager;
+			path = "Training3-Swift";
 			sourceTree = "<group>";
 		};
-		7820DCC325C687F2007E3CEB /* WeatherManagerTests */ = {
+		7820DCC325C687F2007E3CEB /* Training3-SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				7820DCC425C687F2007E3CEB /* Weather_iOSTests.swift */,
+				7820DCC425C687F2007E3CEB /* Training3SwiftTests.swift */,
 				7820DCC625C687F2007E3CEB /* Info.plist */,
 			);
-			path = WeatherManagerTests;
+			path = "Training3-SwiftTests";
 			sourceTree = "<group>";
 		};
 		7826699925C8188400871A6C /* IBdesignable */ = {
@@ -462,21 +457,12 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
-		A9275D4F17BCCACFD5FF8C71 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1EDEA5A35FB20C8D90E17DC6 /* Pods_Weather.framework */,
-				7CE1B2FACBB632FF0E585D97 /* Pods_WeatherTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7820DCA925C687F0007E3CEB /* WeatherManager */ = {
+		7820DCA925C687F0007E3CEB /* Training3-Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManager" */;
+			buildConfigurationList = 7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "Training3-Swift" */;
 			buildPhases = (
 				7820DCF325C6912D007E3CEB /* Rswift */,
 				7820DCA625C687F0007E3CEB /* Sources */,
@@ -488,17 +474,17 @@
 			);
 			dependencies = (
 			);
-			name = WeatherManager;
+			name = "Training3-Swift";
 			packageProductDependencies = (
 				780CC8E3266C9B4400597F76 /* Rswift */,
 			);
 			productName = "Weather-iOS";
-			productReference = 7820DCAA25C687F0007E3CEB /* WeatherManager.app */;
+			productReference = 7820DCAA25C687F0007E3CEB /* Training3-Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7820DCBF25C687F2007E3CEB /* WeatherManagerTests */ = {
+		7820DCBF25C687F2007E3CEB /* Training3-SwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManagerTests" */;
+			buildConfigurationList = 7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "Training3-SwiftTests" */;
 			buildPhases = (
 				7820DCBC25C687F2007E3CEB /* Sources */,
 				7820DCBD25C687F2007E3CEB /* Frameworks */,
@@ -509,9 +495,9 @@
 			dependencies = (
 				7820DCC225C687F2007E3CEB /* PBXTargetDependency */,
 			);
-			name = WeatherManagerTests;
+			name = "Training3-SwiftTests";
 			productName = "Weather-iOSTests";
-			productReference = 7820DCC025C687F2007E3CEB /* WeatherManagerTests.xctest */;
+			productReference = 7820DCC025C687F2007E3CEB /* Training3-SwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -532,7 +518,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "WeatherManager" */;
+			buildConfigurationList = 7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "Training3-Swift" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -548,8 +534,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7820DCA925C687F0007E3CEB /* WeatherManager */,
-				7820DCBF25C687F2007E3CEB /* WeatherManagerTests */,
+				7820DCA925C687F0007E3CEB /* Training3-Swift */,
+				7820DCBF25C687F2007E3CEB /* Training3-SwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -667,7 +653,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7820DCC525C687F2007E3CEB /* Weather_iOSTests.swift in Sources */,
+				7820DCC525C687F2007E3CEB /* Training3SwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,7 +662,7 @@
 /* Begin PBXTargetDependency section */
 		7820DCC225C687F2007E3CEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7820DCA925C687F0007E3CEB /* WeatherManager */;
+			target = 7820DCA925C687F0007E3CEB /* Training3-Swift */;
 			targetProxy = 7820DCC125C687F2007E3CEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -823,13 +809,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherManager/AppResources/Support/InfoPlist/Info.plist;
+				INFOPLIST_FILE = "Training3-Swift/AppResources/Support/InfoPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "yossibank.Weather-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "yossibank.Training3-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -842,13 +828,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherManager/AppResources/Support/InfoPlist/Info.plist;
+				INFOPLIST_FILE = "Training3-Swift/AppResources/Support/InfoPlist/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "yossibank.Weather-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "yossibank.Training3-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -861,18 +847,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherManagerTests/Info.plist;
+				INFOPLIST_FILE = "Training3-SwiftTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yossibank.WeatherTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "yossibank.Training3-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherManager.app/WeatherManager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Training3-Swift.app/Training3-Swift";
 			};
 			name = Debug;
 		};
@@ -882,25 +868,25 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherManagerTests/Info.plist;
+				INFOPLIST_FILE = "Training3-SwiftTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yossibank.WeatherTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "yossibank.Training3-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherManager.app/WeatherManager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Training3-Swift.app/Training3-Swift";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "WeatherManager" */ = {
+		7820DCA525C687F0007E3CEB /* Build configuration list for PBXProject "Training3-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7820DCD225C687F2007E3CEB /* Debug */,
@@ -909,7 +895,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManager" */ = {
+		7820DCD425C687F2007E3CEB /* Build configuration list for PBXNativeTarget "Training3-Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7820DCD525C687F2007E3CEB /* Debug */,
@@ -918,7 +904,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "WeatherManagerTests" */ = {
+		7820DCD725C687F2007E3CEB /* Build configuration list for PBXNativeTarget "Training3-SwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7820DCD825C687F2007E3CEB /* Debug */,
