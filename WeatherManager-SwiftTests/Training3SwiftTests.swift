@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import Training3_Swift
+@testable import WeatherManager_Swift
 
-class Training3SwiftTests: XCTestCase {
+class WeatherManagerSwiftTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
